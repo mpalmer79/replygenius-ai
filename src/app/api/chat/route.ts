@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     });
 
     const response = completion.choices[0]?.message?.content || 
-      "I apologize, but I couldn't generate a response. Please try again or contact us at support@replygenius.ai.";
+      "I apologize, but I couldn't generate a response. Please try again or contact us at support@granitereply.com.";
 
     return NextResponse.json({ response });
   } catch (error) {
