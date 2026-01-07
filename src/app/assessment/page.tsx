@@ -201,7 +201,7 @@ export default function AssessmentPage() {
               <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
                 <span className="text-white font-bold">R</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">ReplyGenius</span>
+              <span className="text-xl font-bold text-gray-900">GraniteReply</span>
             </div>
             <span className="text-sm text-gray-500">Sales Assessment</span>
           </div>
@@ -377,7 +377,7 @@ export default function AssessmentPage() {
             <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
               <span className="text-white font-bold">R</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">ReplyGenius</span>
+            <span className="text-xl font-bold text-gray-900">GraniteReply</span>
           </div>
           <Link href="/" className="text-sm text-gray-500 hover:text-gray-700">
             Exit
