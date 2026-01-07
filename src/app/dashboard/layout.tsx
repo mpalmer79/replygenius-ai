@@ -35,9 +35,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200">
           <Link href="/dashboard" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">R</span>
+              <span className="text-white font-bold text-sm">G</span>
             </div>
-            <span className="text-lg font-bold text-gray-900">ReplyGenius</span>
+            <span className="text-lg font-bold text-gray-900">GraniteReply</span>
           </Link>
           <button
             onClick={() => setSidebarOpen(false)}
