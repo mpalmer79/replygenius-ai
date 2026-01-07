@@ -15,7 +15,7 @@ export default function ChatWidget() {
     {
       id: '1',
       role: 'assistant',
-      content: "Hi there! 👋 I'm the ReplyGenius AI assistant. I'm here to answer any questions you have about our review response platform. How can I help you today?",
+      content: "Hi there! 👋 I'm the GraniteReply AI assistant. I'm here to answer any questions you have about our review response platform. How can I help you today?",
       timestamp: new Date(),
     },
   ]);
@@ -86,7 +86,7 @@ export default function ChatWidget() {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: "I apologize, but I'm having trouble connecting right now. Please try again in a moment, or feel free to email us at support@replygenius.ai for immediate assistance.",
+        content: "I apologize, but I'm having trouble connecting right now. Please try again in a moment, or feel free to email us at support@granitereply.com for immediate assistance.",
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, errorMessage]);
@@ -134,7 +134,7 @@ export default function ChatWidget() {
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="text-white font-semibold">ReplyGenius Assistant</h3>
+              <h3 className="text-white font-semibold">GraniteReply Assistant</h3>
               <p className="text-white/80 text-xs">Typically replies instantly</p>
             </div>
             <button
@@ -205,7 +205,7 @@ export default function ChatWidget() {
               </button>
             </div>
             <p className="text-xs text-gray-400 text-center mt-2">
-              Powered by ReplyGenius AI
+              Powered by GraniteReply AI
             </p>
           </form>
         </div>
