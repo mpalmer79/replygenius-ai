@@ -32,6 +32,7 @@
 - **Multi-Location Support** - Manage multiple business locations from a single account
 - **Live Chat Assistant** - AI-powered chat widget for customer inquiries
 - **Response Templates** - Create and save templates for common review scenarios
+- **Secure Authentication** - Google OAuth and email/password login via Supabase Auth
 
 ---
 
@@ -43,7 +44,7 @@
 | **Language** | TypeScript |
 | **Styling** | Tailwind CSS |
 | **Database** | Supabase (PostgreSQL) |
-| **Authentication** | Supabase Auth |
+| **Authentication** | Supabase Auth (Google OAuth + Email) |
 | **AI** | OpenAI GPT-4 |
 | **Google Integration** | Google Business Profile API |
 | **Deployment** | Vercel |
@@ -54,8 +55,9 @@
 ## 📁 Project Structure
 
 ```
-granitereply/
+replygenius-ai/
 ├── src/
+│   ├── middleware.ts                     # Auth protection for routes
 │   ├── app/
 │   │   ├── api/
 │   │   │   ├── ai/
@@ -63,9 +65,9 @@ granitereply/
 │   │   │   │       └── route.ts          # AI response generation
 │   │   │   ├── auth/
 │   │   │   │   └── google/
-│   │   │   │       ├── route.ts          # Google OAuth initiation
+│   │   │   │       ├── route.ts          # Google Business OAuth initiation
 │   │   │   │       └── callback/
-│   │   │   │           └── route.ts      # Google OAuth callback
+│   │   │   │           └── route.ts      # Google Business OAuth callback
 │   │   │   ├── chat/
 │   │   │   │   └── route.ts              # Chat widget API
 │   │   │   └── reviews/
@@ -73,19 +75,24 @@ granitereply/
 │   │   │       │   └── route.ts          # Sync reviews from Google
 │   │   │       └── respond/
 │   │   │           └── route.ts          # Post responses to Google
+│   │   ├── auth/
+│   │   │   └── callback/
+│   │   │       └── route.ts              # Supabase auth callback
+│   │   ├── admin/
+│   │   │   └── page.tsx                  # Admin dashboard
 │   │   ├── assessment/
 │   │   │   └── page.tsx                  # Sales qualification tool
 │   │   ├── dashboard/
-│   │   │   ├── layout.tsx                # Dashboard layout
+│   │   │   ├── layout.tsx                # Dashboard layout with sidebar
 │   │   │   ├── page.tsx                  # Dashboard home
 │   │   │   ├── reviews/
 │   │   │   │   └── page.tsx              # Reviews management
 │   │   │   └── settings/
 │   │   │       └── page.tsx              # Settings & platform connections
 │   │   ├── login/
-│   │   │   └── page.tsx                  # Login page
+│   │   │   └── page.tsx                  # Login page (Supabase Auth)
 │   │   ├── signup/
-│   │   │   └── page.tsx                  # Signup page
+│   │   │   └── page.tsx                  # Signup page (Supabase Auth)
 │   │   ├── globals.css                   # Global styles & animations
 │   │   ├── layout.tsx                    # Root layout with chat widget
 │   │   └── page.tsx                      # Landing page
@@ -99,12 +106,13 @@ granitereply/
 │   │   │   └── business-profile.ts       # Google Business Profile API
 │   │   ├── supabase/
 │   │   │   ├── client.ts                 # Supabase browser client
-│   │   │   └── server.ts                 # Supabase server client
+│   │   │   ├── server.ts                 # Supabase server client + admin
+│   │   │   └── middleware.ts             # Session management utilities
 │   │   └── utils.ts                      # Utility functions
 │   └── types/
 │       └── index.ts                      # TypeScript type definitions
 ├── supabase/
-│   └── schema.sql                        # Database schema
+│   └── schema.sql                        # Database schema with RLS
 ├── tailwind.config.ts                    # Tailwind configuration
 ├── next.config.js                        # Next.js configuration
 ├── tsconfig.json                         # TypeScript configuration
@@ -126,8 +134,8 @@ granitereply/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/mpalmer79/granitereply.git
-cd granitereply
+git clone https://github.com/mpalmer79/replygenius-ai.git
+cd replygenius-ai
 ```
 
 ### 2. Install Dependencies
@@ -162,12 +170,20 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 1. Create a new project in [Supabase](https://supabase.com)
 2. Go to SQL Editor
 3. Run the contents of `supabase/schema.sql`
+4. Go to Authentication → Policies and verify RLS policies are created
 
-### 5. Set Up Google Cloud (Optional)
+### 5. Set Up Supabase Auth
+
+1. Go to Authentication → Sign In / Providers
+2. Enable **Email** provider
+3. Enable **Google** provider and add your OAuth credentials
+4. Copy the Supabase callback URL and add it to Google Cloud Console
+
+### 6. Set Up Google Cloud
 
 See [Google Business Profile Setup](#-google-business-profile-setup) section below.
 
-### 6. Run Development Server
+### 7. Run Development Server
 
 ```bash
 npm run dev
@@ -201,6 +217,8 @@ Enable these APIs in your project:
    - App name: `GraniteReply`
    - User support email: Your email
    - Developer contact: Your email
+4. Add scopes:
+   - `https://www.googleapis.com/auth/business.manage`
 
 ### 4. Create OAuth Credentials
 
@@ -208,11 +226,12 @@ Enable these APIs in your project:
 2. Click **Create Credentials** → **OAuth client ID**
 3. Select **Web application**
 4. Add authorized JavaScript origins:
-   - `https://granitereply.com`
+   - `https://your-app.vercel.app`
    - `http://localhost:3000`
 5. Add authorized redirect URIs:
-   - `https://granitereply.com/api/auth/google/callback`
-   - `http://localhost:3000/api/auth/google/callback`
+   - `https://your-app.vercel.app/api/auth/google/callback` (Google Business Profile)
+   - `http://localhost:3000/api/auth/google/callback` (Local development)
+   - `https://your-project-ref.supabase.co/auth/v1/callback` (Supabase Auth)
 6. Copy **Client ID** and **Client Secret**
 
 ### 5. Add to Environment Variables
@@ -240,7 +259,7 @@ The application uses the following main tables:
 | `activity_log` | Audit trail of all actions |
 | `analytics_daily` | Daily aggregated metrics |
 
-All tables include Row Level Security (RLS) policies for data protection.
+All tables include Row Level Security (RLS) policies for data protection. Users can only access data within their own organization.
 
 ---
 
@@ -274,9 +293,9 @@ All tables include Row Level Security (RLS) policies for data protection.
 
 ### Google Integration
 
-**GET `/api/auth/google`** - Initiate Google OAuth flow
+**GET `/api/auth/google`** - Initiate Google Business Profile OAuth flow
 
-**GET `/api/auth/google/callback`** - Handle OAuth callback
+**GET `/api/auth/google/callback`** - Handle Google Business Profile OAuth callback
 
 **POST `/api/reviews/sync`** - Sync reviews from Google Business Profile
 
@@ -288,6 +307,10 @@ All tables include Row Level Security (RLS) policies for data protection.
   "autoGenerate": true
 }
 ```
+
+### Authentication
+
+**GET `/auth/callback`** - Supabase Auth callback (handles Google sign-in and email confirmation)
 
 ---
 
@@ -304,35 +327,41 @@ All tables include Row Level Security (RLS) policies for data protection.
    - `OPENAI_API_KEY`
    - `GOOGLE_CLIENT_ID`
    - `GOOGLE_CLIENT_SECRET`
+   - `NEXT_PUBLIC_APP_URL` (your Vercel domain)
 4. Deploy
 
 ### Production Checklist
 
 - [x] Set up Supabase production project
+- [x] Configure RLS policies for all tables
+- [x] Set up Supabase Auth with Google provider
 - [x] Configure OpenAI API with billing
 - [x] Set production environment variables
 - [x] Enable Supabase email confirmations
-- [x] Configure custom domain
 - [x] Set up Google Cloud project
-- [x] Configure Google OAuth credentials
-- [ ] Set up Stripe for payments (optional)
+- [x] Configure Google OAuth credentials (all 3 redirect URIs)
+- [x] Route protection middleware configured
+- [ ] Configure custom domain
+- [ ] Set up Stripe for payments
 - [ ] Submit Google app for verification (for production)
 
 ---
 
 ## 💰 Pricing Tiers
 
-| Plan | Monthly | Locations | Reviews/Month |
-|------|---------|-----------|---------------|
-| **Starter** | $200 | 1 | 50 |
-| **Growth** | $400 | 3 | 150 |
-| **Enterprise** | $800 | 10 | 500 |
+| Plan | Monthly | Setup Fee | Locations | Reviews/Month |
+|------|---------|-----------|-----------|---------------|
+| **Starter** | $199 | $500 | 1 | 50 |
+| **Growth** | $399 | $1,000 | 3 | 150 |
+| **Enterprise** | $699 | $2,000 | 10 | 500 |
 
 All plans include:
 - 14-day free trial
+- First month FREE
 - AI-powered responses
 - Multi-platform support
 - Basic analytics
+- Multi-language add-on available
 
 ---
 
@@ -375,6 +404,15 @@ Configure the chat assistant in `src/lib/ai/chat-config.ts`:
 - Response style
 - Escalation triggers
 
+### Route Protection
+
+Protected routes are configured in `src/lib/supabase/middleware.ts`:
+
+```typescript
+const protectedPaths = ['/dashboard', '/admin'];
+const authPaths = ['/login', '/signup'];
+```
+
 ---
 
 ## 📊 Analytics
@@ -391,20 +429,33 @@ The dashboard tracks:
 
 ## 🔒 Security
 
-- **Row Level Security (RLS)** - All database tables protected
+- **Row Level Security (RLS)** - All database tables protected with organization-scoped policies
+- **Supabase Auth** - Secure authentication with JWT and session management
+- **Route Protection** - Middleware prevents unauthorized access to dashboard
 - **Environment Variables** - Secrets never exposed to client
-- **Supabase Auth** - Secure authentication with JWT
-- **OAuth 2.0** - Secure Google integration
-- **API Key Rotation** - Service role key separate from anon key
+- **OAuth 2.0** - Secure Google integration for both auth and Business Profile
+- **Service Role Separation** - Admin operations use separate service role key
 
 ---
 
 ## 🛣 Roadmap
 
+### Completed
 - [x] Google Business Profile OAuth
 - [x] Automated review syncing
-- [x] AI-powered response posting
+- [x] AI-powered response generation
 - [x] Live chat assistant
+- [x] Supabase Auth integration (Google + Email)
+- [x] Route protection middleware
+- [x] Row Level Security policies
+- [x] Multi-location database support
+
+### In Progress
+- [ ] Dashboard with real data (replacing mock data)
+- [ ] User onboarding flow
+- [ ] Logout functionality
+
+### Planned
 - [ ] Stripe payment integration
 - [ ] Yelp API integration
 - [ ] Facebook Graph API integration
@@ -426,7 +477,6 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 For questions or support, contact:
 - Email: support@granitereply.com
-- Documentation: [docs.granitereply.com](https://docs.granitereply.com)
 
 ---
 
@@ -435,9 +485,9 @@ For questions or support, contact:
   <strong>Built with ❤️ for local businesses</strong>
   <br />
   <br />
-  <a href="https://granitereply.com">View Demo</a>
+  <a href="https://replygenius-ai.vercel.app">View Demo</a>
   ·
-  <a href="https://github.com/mpalmer79/granitereply/issues">Report Bug</a>
+  <a href="https://github.com/mpalmer79/replygenius-ai/issues">Report Bug</a>
   ·
-  <a href="https://github.com/mpalmer79/granitereply/issues">Request Feature</a>
+  <a href="https://github.com/mpalmer79/replygenius-ai/issues">Request Feature</a>
 </div>
