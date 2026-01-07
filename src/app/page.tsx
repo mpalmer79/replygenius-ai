@@ -326,10 +326,11 @@ export default function HomePage() {
               </div>
               <span className="text-xl font-bold text-gray-900">ReplyGenius</span>
             </div>
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center justify-center flex-1 space-x-8">
               <a href="#features" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">Features</a>
               <a href="#pricing" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">Pricing</a>
               <a href="#how-it-works" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">How It Works</a>
+              <Link href="/assessment" className="text-gray-500 hover:text-primary-600 transition-colors font-medium">Assessment</Link>
             </div>
             <div className="flex items-center space-x-4">
               <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
