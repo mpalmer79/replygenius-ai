@@ -315,4 +315,17 @@ export default function HomePage() {
               </div>
               <span className="text-xl font-bold text-white">ReplyGenius</span>
             </div>
-            <div className="flex items-center space-x-
+            <div className="flex items-center space-x-6 text-gray-400">
+              <a href="#" className="hover:text-white transition-colors">Privacy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms</a>
+              <a href="#" className="hover:text-white transition-colors">Contact</a>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">
+            © {new Date().getFullYear()} ReplyGenius AI. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
