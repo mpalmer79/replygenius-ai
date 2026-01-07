@@ -26,7 +26,7 @@
 - **Google Business Profile Integration** - Connect and auto-respond to Google reviews
 - **Multi-Platform Support** - Manage reviews from Google, Yelp, Facebook, and TripAdvisor in one dashboard
 - **Custom Brand Voice** - Train the AI to match your unique tone, personality, and communication style
-- **Sentiment Analysis** - Automatically detect negative reviews and prioritize urgent responses
+- **Sentiment Analysis** - Automatically detect negative reviews and prioritize urgent response
 - **Approval Workflow** - Review and edit AI responses before posting with one-click approval
 - **Analytics & Reports** - Track response rates, sentiment trends, and review volume
 - **Multi-Location Support** - Manage multiple business locations from a single account
