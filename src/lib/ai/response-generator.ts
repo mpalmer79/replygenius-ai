@@ -35,6 +35,8 @@ export async function generateReviewResponse(params: GenerateParams): Promise<{ 
 
   let systemPrompt = `You are a review response specialist for ${businessName}. Write responses that are ${toneDescriptions[brandVoice.tone]}.
 
+IMPORTANT: Detect the language of the review and respond in THE SAME LANGUAGE. If the review is in Spanish, respond in Spanish. If the review is in French, respond in French. Match the customer's language exactly.
+
 ${lengthInstructions[brandVoice.response_length]}
 
 ${brandVoice.personality_description ? `Brand personality: ${brandVoice.personality_description}` : ''}
