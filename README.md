@@ -1,4 +1,4 @@
-# ReplyGenius AI
+# GraniteReply AI
 
 <div align="center">
   <img src="https://img.shields.io/badge/Next.js-14.0-black?style=for-the-badge&logo=next.js" alt="Next.js" />
@@ -15,7 +15,7 @@
   <strong>AI-Powered Review Response Platform for Local Businesses</strong>
   <br />
   <br />
-  <p>Stop spending hours crafting review responses. ReplyGenius AI generates personalized, on-brand replies to your Google, Yelp, Facebook, and TripAdvisor reviews in seconds.</p>
+  <p>Stop spending hours crafting review responses. GraniteReply AI generates personalized, on-brand replies to your Google, Yelp, Facebook, and TripAdvisor reviews in seconds.</p>
 </div>
 
 ---
@@ -26,7 +26,7 @@
 - **Google Business Profile Integration** - Connect and auto-respond to Google reviews
 - **Multi-Platform Support** - Manage reviews from Google, Yelp, Facebook, and TripAdvisor in one dashboard
 - **Custom Brand Voice** - Train the AI to match your unique tone, personality, and communication style
-- **Sentiment Analysis** - Automatically detect negative reviews and prioritize urgent response
+- **Sentiment Analysis** - Automatically detect negative reviews and prioritize urgent responses
 - **Approval Workflow** - Review and edit AI responses before posting with one-click approval
 - **Analytics & Reports** - Track response rates, sentiment trends, and review volume
 - **Multi-Location Support** - Manage multiple business locations from a single account
@@ -54,7 +54,7 @@
 ## 📁 Project Structure
 
 ```
-replygenius-ai/
+granitereply/
 ├── src/
 │   ├── app/
 │   │   ├── api/
@@ -126,8 +126,8 @@ replygenius-ai/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/mpalmer79/replygenius-ai.git
-cd replygenius-ai
+git clone https://github.com/mpalmer79/granitereply.git
+cd granitereply
 ```
 
 ### 2. Install Dependencies
@@ -184,7 +184,7 @@ To enable automatic Google review syncing and responding:
 ### 1. Create Google Cloud Project
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com)
-2. Create a new project called "ReplyGenius"
+2. Create a new project called "GraniteReply"
 
 ### 2. Enable APIs
 
@@ -198,7 +198,7 @@ Enable these APIs in your project:
 1. Go to **APIs & Services** → **OAuth consent screen**
 2. Select **External** user type
 3. Fill in app information:
-   - App name: `ReplyGenius`
+   - App name: `GraniteReply`
    - User support email: Your email
    - Developer contact: Your email
 
@@ -208,10 +208,10 @@ Enable these APIs in your project:
 2. Click **Create Credentials** → **OAuth client ID**
 3. Select **Web application**
 4. Add authorized JavaScript origins:
-   - `https://replygenius-ai.vercel.app`
+   - `https://granitereply.com`
    - `http://localhost:3000`
 5. Add authorized redirect URIs:
-   - `https://replygenius-ai.vercel.app/api/auth/google/callback`
+   - `https://granitereply.com/api/auth/google/callback`
    - `http://localhost:3000/api/auth/google/callback`
 6. Copy **Client ID** and **Client Secret**
 
@@ -425,8 +425,8 @@ MIT License - see [LICENSE](LICENSE) for details.
 ## 🤝 Support
 
 For questions or support, contact:
-- Email: support@replygenius.ai
-- Documentation: [docs.replygenius.ai](https://docs.replygenius.ai)
+- Email: support@granitereply.com
+- Documentation: [docs.granitereply.com](https://docs.granitereply.com)
 
 ---
 
@@ -435,9 +435,9 @@ For questions or support, contact:
   <strong>Built with ❤️ for local businesses</strong>
   <br />
   <br />
-  <a href="https://replygenius-ai.vercel.app">View Demo</a>
+  <a href="https://granitereply.com">View Demo</a>
   ·
-  <a href="https://github.com/mpalmer79/replygenius-ai/issues">Report Bug</a>
+  <a href="https://github.com/mpalmer79/granitereply/issues">Report Bug</a>
   ·
-  <a href="https://github.com/mpalmer79/replygenius-ai/issues">Request Feature</a>
+  <a href="https://github.com/mpalmer79/granitereply/issues">Request Feature</a>
 </div>
