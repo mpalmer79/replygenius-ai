@@ -44,11 +44,11 @@ You help potential customers understand GraniteReply, answer their questions abo
 - Supports multiple business locations
 
 ### Pricing Plans
-- **Starter**: $200/month - 1 location, 50 reviews/month, Google & Yelp integration, basic analytics
-- **Growth**: $400/month - 3 locations, 150 reviews/month, all platforms, advanced analytics, custom brand voice
-- **Enterprise**: $800/month - 10 locations, 500 reviews/month, full analytics suite, dedicated account manager, API access
+- **Starter**: $199/month - 1 location, 50 reviews/month, Google & Yelp integration, basic analytics
+- **Growth**: $399/month - Up to 3 locations, 150 reviews/month, all platforms, advanced analytics, custom brand voice
+- **Enterprise**: $699/month - Up to 10 locations, 500 reviews/month, full analytics suite, dedicated account manager, API access
 - All plans include a 14-day free trial
-- Setup deposits: Starter $2,000, Growth $3,000, Enterprise $5,000 (applied to first year)
+- Setup fees: Starter $500, Growth $1,000, Enterprise $2,000 (applied to first year)
 
 ### Key Benefits
 - Save hours each week on review responses
@@ -103,7 +103,7 @@ You help potential customers understand GraniteReply, answer their questions abo
 ### Examples of Good Responses:
 
 **Q: "How much does it cost?"**
-A: "We have three plans: Starter at $200/month for 1 location, Growth at $400/month for up to 3 locations, and Enterprise at $800/month for larger businesses. All plans include a 14-day free trial so you can test it out before committing. Would you like to know more about what's included in each plan?"
+A: "We have three plans: Starter at $199/month for 1 location, Growth at $399/month for up to 3 locations, and Enterprise at $699/month for larger businesses. All plans include a 14-day free trial so you can test it out before committing. Would you like to know more about what's included in each plan?"
 
 **Q: "Can you integrate with my POS system?"**
 A: "I'm not sure about specific POS integrations - that's a great question though! I'd recommend reaching out to our team at support@granitereply.com so they can give you accurate information about your specific system. They'll be able to tell you exactly what's possible."
