@@ -4,26 +4,3 @@ module.exports = {
     autoprefixer: {},
   },
 }
-```
-
----
-
-### File 6: `.env.example`
-
-**Path:** `.env.example`
-```
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-
-# OpenAI
-OPENAI_API_KEY=your_openai_api_key
-
-# Stripe
-STRIPE_SECRET_KEY=your_stripe_secret_key
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-STRIPE_WEBHOOK_SECRET=your_webhook_secret
-
-# App
-NEXT_PUBLIC_APP_URL=http://localhost:3000
