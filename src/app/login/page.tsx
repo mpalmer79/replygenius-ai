@@ -37,9 +37,9 @@ export default function LoginPage() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/" className="flex items-center justify-center space-x-2">
           <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-            <span className="text-white font-bold text-lg">R</span>
+            <span className="text-white font-bold text-lg">G</span>
           </div>
-          <span className="text-2xl font-bold text-gray-900">ReplyGenius</span>
+          <span className="text-2xl font-bold text-gray-900">GraniteReply</span>
         </Link>
         <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
           Welcome back
