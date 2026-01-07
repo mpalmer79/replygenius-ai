@@ -182,8 +182,8 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'starter',
     name: 'Starter',
-    monthlyPrice: 200,
-    setupDeposit: 2000,
+    monthlyPrice: 199,
+    setupDeposit: 500,
     reviewsPerMonth: 50,
     locations: 1,
     features: [
@@ -197,8 +197,8 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'growth',
     name: 'Growth',
-    monthlyPrice: 400,
-    setupDeposit: 3000,
+    monthlyPrice: 399,
+    setupDeposit: 1000,
     reviewsPerMonth: 150,
     locations: 3,
     popular: true,
@@ -214,8 +214,8 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'enterprise',
     name: 'Enterprise',
-    monthlyPrice: 800,
-    setupDeposit: 5000,
+    monthlyPrice: 699,
+    setupDeposit: 2000,
     reviewsPerMonth: 500,
     locations: 10,
     features: [
