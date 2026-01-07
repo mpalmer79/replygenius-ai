@@ -215,11 +215,11 @@ Generate an AI response for a review.
 
 ### Production Checklist
 
-- [ ] Set up Supabase production project
-- [ ] Configure OpenAI API with billing
-- [ ] Set production environment variables
-- [ ] Enable Supabase email confirmations
-- [ ] Configure custom domain
+- [x] Set up Supabase production project
+- [x] Configure OpenAI API with billing
+- [x] Set production environment variables
+- [x] Enable Supabase email confirmations
+- [x] Configure custom domain
 - [ ] Set up Stripe for payments (optional)
 
 ---
