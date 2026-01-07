@@ -1,12 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import type { ToneType, ResponseLength } from '@/types';
 
-export default function SettingsPage() {
+function SettingsContent() {
+  const searchParams = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
   const [isTesting, setIsTesting] = useState(false);
   const [testResponse, setTestResponse] = useState('');
+  const [googleConnected, setGoogleConnected] = useState(false);
+  const [connectionMessage, setConnectionMessage] = useState('');
   const [settings, setSettings] = useState({
     tone: 'friendly' as ToneType,
     response_length: 'medium' as ResponseLength,
@@ -23,6 +27,24 @@ export default function SettingsPage() {
 
   const handleChange = (field: string, value: string | boolean) => {
     setSettings({ ...settings, [field]: value });
+  };
+
+  // Check URL params for Google connection status
+  useEffect(() => {
+    const googleStatus = searchParams.get('google');
+    const error = searchParams.get('error');
+    const accounts = searchParams.get('accounts');
+
+    if (googleStatus === 'connected') {
+      setGoogleConnected(true);
+      setConnectionMessage(`Successfully connected to Google Business Profile${accounts ? ` (${accounts} account${accounts !== '1' ? 's' : ''} found)` : ''}!`);
+    } else if (error) {
+      setConnectionMessage(`Connection failed: ${error.replace(/_/g, ' ')}`);
+    }
+  }, [searchParams]);
+
+  const handleConnectGoogle = () => {
+    window.location.href = '/api/auth/google?redirect=/dashboard/settings';
   };
 
   const handleSave = async () => {
@@ -53,6 +75,116 @@ export default function SettingsPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Settings Form */}
         <div className="lg:col-span-2 space-y-6">
+          {/* Connection Status Message */}
+          {connectionMessage && (
+            <div className={`p-4 rounded-lg ${googleConnected ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'}`}>
+              <div className="flex items-center">
+                {googleConnected ? (
+                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                <span className={googleConnected ? 'text-green-700' : 'text-red-700'}>{connectionMessage}</span>
+              </div>
+            </div>
+          )}
+
+          {/* Platform Connections */}
+          <div className="card">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">Platform Connections</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Connect your review platforms to automatically sync and respond to reviews
+            </p>
+            
+            <div className="space-y-4">
+              {/* Google Business Profile */}
+              <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
+                    G
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900">Google Business Profile</div>
+                    <div className="text-sm text-gray-500">
+                      {googleConnected ? 'Connected' : 'Sync reviews from Google Maps & Search'}
+                    </div>
+                  </div>
+                </div>
+                <button
+                  onClick={handleConnectGoogle}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    googleConnected
+                      ? 'bg-green-100 text-green-700 hover:bg-green-200'
+                      : 'bg-blue-500 text-white hover:bg-blue-600'
+                  }`}
+                >
+                  {googleConnected ? (
+                    <span className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Connected
+                    </span>
+                  ) : (
+                    'Connect'
+                  )}
+                </button>
+              </div>
+
+              {/* Yelp - Coming Soon */}
+              <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg opacity-60">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
+                    Y
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900">Yelp</div>
+                    <div className="text-sm text-gray-500">Manage Yelp reviews</div>
+                  </div>
+                </div>
+                <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-xs font-medium">
+                  Coming Soon
+                </span>
+              </div>
+
+              {/* Facebook - Coming Soon */}
+              <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg opacity-60">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">
+                    f
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900">Facebook</div>
+                    <div className="text-sm text-gray-500">Manage Facebook recommendations</div>
+                  </div>
+                </div>
+                <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-xs font-medium">
+                  Coming Soon
+                </span>
+              </div>
+
+              {/* TripAdvisor - Coming Soon */}
+              <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg opacity-60">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold">
+                    T
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900">TripAdvisor</div>
+                    <div className="text-sm text-gray-500">Manage TripAdvisor reviews</div>
+                  </div>
+                </div>
+                <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-xs font-medium">
+                  Coming Soon
+                </span>
+              </div>
+            </div>
+          </div>
+
           {/* Brand Voice */}
           <div className="card">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Brand Voice</h2>
@@ -335,5 +467,13 @@ export default function SettingsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SettingsPage() {
+  return (
+    <Suspense fallback={<div className="p-6">Loading settings...</div>}>
+      <SettingsContent />
+    </Suspense>
   );
 }
