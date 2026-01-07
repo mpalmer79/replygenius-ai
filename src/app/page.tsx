@@ -327,9 +327,9 @@ export default function HomePage() {
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
               <div className="w-9 h-9 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/25">
-                <span className="text-white font-bold">R</span>
+                <span className="text-white font-bold">G</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">ReplyGenius</span>
+              <span className="text-xl font-bold text-gray-900">GraniteReply</span>
             </a>
             <div className="hidden md:flex items-center justify-center flex-1 space-x-8">
               <a href="#features" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">Features</a>
@@ -369,7 +369,7 @@ export default function HomePage() {
             
             {/* Subheadline */}
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Stop spending hours crafting review responses. ReplyGenius AI generates personalized, 
+              Stop spending hours crafting review responses. GraniteReply AI generates personalized, 
               on-brand replies to your Google, Yelp, Facebook, and TripAdvisor reviews in seconds.
             </p>
             
@@ -413,7 +413,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
               See AI Responses in Action
             </h2>
-            <p className="text-gray-600 text-lg">Real examples of how ReplyGenius transforms customer interactions</p>
+            <p className="text-gray-600 text-lg">Real examples of how GraniteReply transforms customer interactions</p>
           </div>
 
           {/* Review Showcase Card */}
@@ -469,7 +469,7 @@ export default function HomePage() {
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
-                      <span className="text-xs font-medium">ReplyGenius AI</span>
+                      <span className="text-xs font-medium">GraniteReply AI</span>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-sm border border-primary-100">
@@ -793,9 +793,9 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <div className="w-9 h-9 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold">R</span>
+                <span className="text-white font-bold">G</span>
               </div>
-              <span className="text-xl font-bold text-white">ReplyGenius</span>
+              <span className="text-xl font-bold text-white">GraniteReply</span>
             </div>
             <div className="flex items-center space-x-6 text-gray-400">
               <a href="#" className="hover:text-white transition-colors">Privacy</a>
@@ -804,7 +804,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">
-            © {new Date().getFullYear()} ReplyGenius AI. All rights reserved.
+            © {new Date().getFullYear()} GraniteReply AI. All rights reserved.
           </div>
         </div>
       </footer>
