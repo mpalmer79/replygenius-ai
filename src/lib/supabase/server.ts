@@ -1,6 +1,8 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr';
+import { createClient as createServiceClient } from '@supabase/supabase-js';
 import { cookies } from 'next/headers';
 
+// For Server Components and Route Handlers that need user context
 export async function createClient() {
   const cookieStore = await cookies();
 
@@ -26,3 +28,9 @@ export async function createClient() {
     }
   );
 }
+
+// For API routes that need admin/service role access (bypasses RLS)
+export const supabaseAdmin = createServiceClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
