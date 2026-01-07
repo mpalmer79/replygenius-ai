@@ -269,7 +269,7 @@ export default function HomePage() {
         setCurrentReviewIndex((prev) => (prev + 1) % reviewShowcase.length);
         setIsTransitioning(false);
       }, 500);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
