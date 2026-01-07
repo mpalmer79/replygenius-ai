@@ -6,7 +6,7 @@ import ChatWidget from '@/components/ChatWidget';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ReplyGenius AI - Automated Review Response Platform',
+  title: 'GraniteReply AI - Automated Review Response Platform',
   description: 'AI-powered review response management for local businesses. Respond to Google, Yelp, Facebook, and TripAdvisor reviews in seconds.',
 };
 
