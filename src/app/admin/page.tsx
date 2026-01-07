@@ -61,10 +61,10 @@ export default function AdminDashboard() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
               <div className="w-9 h-9 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-sm">R</span>
+                <span className="text-white font-bold text-sm">G</span>
               </div>
               <div>
-                <span className="text-lg font-bold">ReplyGenius</span>
+                <span className="text-lg font-bold">GraniteReply</span>
                 <span className="ml-2 px-2 py-0.5 bg-amber-500 text-xs font-semibold rounded">ADMIN</span>
               </div>
             </div>
