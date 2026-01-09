@@ -56,7 +56,7 @@ export default function ChatWidget() {
     setIsGenerating(true);
     
     try {
-      const response = await fetch('/api/ai/generate', {
+      const response = await fetch('/api/demo/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
