@@ -13,7 +13,8 @@ const reviewShowcase = [
     reviewer: 'Sarah M.',
     rating: 5,
     review: "Best Italian food I've had outside of Italy! The carbonara was absolutely perfect and the tiramisu was heavenly.",
-    response: "Sarah, you've made our entire kitchen team smile! We're thrilled our carbonara transported you to Italy – our chef insists on using authentic guanciale and pecorino romano. Your kind words about the tiramisu are going straight to Nonna! We can't wait to welcome you back for another taste of Italy. Grazie mille! – Marco, Owner",
+    response:
+      "Sarah, you've made our entire kitchen team smile! We're thrilled our carbonara transported you to Italy – our chef insists on using authentic guanciale and pecorino romano. Your kind words about the tiramisu are going straight to Nonna! We can't wait to welcome you back for another taste of Italy. Grazie mille! – Marco, Owner",
     avatar: 'SM',
   },
   {
@@ -22,8 +23,9 @@ const reviewShowcase = [
     business: 'Premier Auto Spa',
     reviewer: 'Mike T.',
     rating: 2,
-    review: "Waited 3 hours for a detail that was supposed to take 90 minutes. Car looked okay but not worth the wait.",
-    response: "Mike, I sincerely apologize for the extended wait time – that's simply not the experience we strive to deliver. You trusted us with your vehicle and we let you down on timing. I'd love to make this right with a complimentary express detail on your next visit. Please reach out to me directly at manager@premierautospa.com. – James, General Manager",
+    review: 'Waited 3 hours for a detail that was supposed to take 90 minutes. Car looked okay but not worth the wait.',
+    response:
+      "Mike, I sincerely apologize for the extended wait time – that's simply not the experience we strive to deliver. You trusted us with your vehicle and we let you down on timing. I'd love to make this right with a complimentary express detail on your next visit. Please reach out to me directly at manager@premierautospa.com. – James, General Manager",
     avatar: 'MT',
   },
   {
@@ -32,8 +34,10 @@ const reviewShowcase = [
     business: 'Sunshine Dental Care',
     reviewer: 'Emily R.',
     rating: 5,
-    review: "Dr. Chen is amazing! Finally found a dentist who doesn't make me anxious. The whole staff is so friendly and patient.",
-    response: "Emily, thank you for sharing your experience! Dr. Chen and our entire team are dedicated to creating a comfortable, anxiety-free environment. We believe everyone deserves stress-free dental care, and we're honored you've entrusted us with your smile. See you at your next checkup! – Sunshine Dental Care Team",
+    review:
+      "Dr. Chen is amazing! Finally found a dentist who doesn't make me anxious. The whole staff is so friendly and patient.",
+    response:
+      "Emily, thank you for sharing your experience! Dr. Chen and our entire team are dedicated to creating a comfortable, anxiety-free environment. We believe everyone deserves stress-free dental care, and we're honored you've entrusted us with your smile. See you at your next checkup! – Sunshine Dental Care Team",
     avatar: 'ER',
   },
   {
@@ -42,8 +46,9 @@ const reviewShowcase = [
     business: 'Harbor View Hotel',
     reviewer: 'David L.',
     rating: 5,
-    review: "Celebrated our 25th anniversary here. The staff surprised us with champagne and rose petals. Unforgettable!",
-    response: "David, congratulations on 25 wonderful years! It was our absolute pleasure to help make your anniversary celebration special. Moments like these are why we do what we do. We've noted your anniversary in our guest records – we hope to help you celebrate many more milestones! – The Harbor View Family",
+    review: 'Celebrated our 25th anniversary here. The staff surprised us with champagne and rose petals. Unforgettable!',
+    response:
+      "David, congratulations on 25 wonderful years! It was our absolute pleasure to help make your anniversary celebration special. Moments like these are why we do what we do. We've noted your anniversary in our guest records – we hope to help you celebrate many more milestones! – The Harbor View Family",
     avatar: 'DL',
   },
   {
@@ -52,8 +57,9 @@ const reviewShowcase = [
     business: "Tony's Barber Shop",
     reviewer: 'Chris P.',
     rating: 4,
-    review: "Great haircut as always! Only reason for 4 stars is the wait time can be long on weekends.",
-    response: "Thanks Chris! Glad you're happy with the cut. You're right about weekends – we've heard you! We're introducing online booking next month to help manage the rush. Pro tip: Tuesday and Wednesday afternoons are usually our quietest times. See you in the chair! – Tony",
+    review: 'Great haircut as always! Only reason for 4 stars is the wait time can be long on weekends.',
+    response:
+      "Thanks Chris! Glad you're happy with the cut. You're right about weekends – we've heard you! We're introducing online booking next month to help manage the rush. Pro tip: Tuesday and Wednesday afternoons are usually our quietest times. See you in the chair! – Tony",
     avatar: 'CP',
   },
   {
@@ -62,8 +68,9 @@ const reviewShowcase = [
     business: 'Green Leaf Yoga Studio',
     reviewer: 'Jennifer K.',
     rating: 5,
-    review: "The hot yoga classes are incredible! Lost 15 pounds in 3 months and my flexibility has improved so much.",
-    response: "Jennifer, what an incredible transformation! 15 pounds and improved flexibility is no small achievement – that's YOUR dedication showing up on the mat every class. Stories like yours inspire our whole community. Keep flowing, keep growing! 🧘‍♀️ – Namaste, The Green Leaf Team",
+    review: 'The hot yoga classes are incredible! Lost 15 pounds in 3 months and my flexibility has improved so much.',
+    response:
+      "Jennifer, what an incredible transformation! 15 pounds and improved flexibility is no small achievement – that's YOUR dedication showing up on the mat every class. Stories like yours inspire our whole community. Keep flowing, keep growing! 🧘‍♀️ – Namaste, The Green Leaf Team",
     avatar: 'JK',
   },
   {
@@ -73,7 +80,8 @@ const reviewShowcase = [
     reviewer: 'Lisa H.',
     rating: 1,
     review: "They cut my dog's ear while grooming. Very upset. Dog was traumatized.",
-    response: "Lisa, I am deeply sorry about what happened to your fur baby. This is completely unacceptable, and I take full responsibility. I've personally addressed this with our grooming team and enhanced our safety protocols. I would like to cover all veterinary expenses and discuss how we can make this right. Please call me directly at 555-0123. – Amanda, Owner",
+    response:
+      "Lisa, I am deeply sorry about what happened to your fur baby. This is completely unacceptable, and I take full responsibility. I've personally addressed this with our grooming team and enhanced our safety protocols. I would like to cover all veterinary expenses and discuss how we can make this right. Please call me directly at 555-0123. – Amanda, Owner",
     avatar: 'LH',
   },
   {
@@ -82,8 +90,9 @@ const reviewShowcase = [
     business: 'Quick Fix Phone Repair',
     reviewer: 'Brandon S.',
     rating: 5,
-    review: "Fixed my cracked iPhone screen in 20 minutes while I waited. Price was fair and they even cleaned my phone!",
-    response: "Brandon, thanks for choosing Quick Fix! We know a cracked screen can ruin your day, so we hustle to get you back up and running ASAP. The complimentary cleaning is our little extra touch. Remember, we also do battery replacements when that time comes! – Quick Fix Crew",
+    review: 'Fixed my cracked iPhone screen in 20 minutes while I waited. Price was fair and they even cleaned my phone!',
+    response:
+      "Brandon, thanks for choosing Quick Fix! We know a cracked screen can ruin your day, so we hustle to get you back up and running ASAP. The complimentary cleaning is our little extra touch. Remember, we also do battery replacements when that time comes! – Quick Fix Crew",
     avatar: 'BS',
   },
   {
@@ -92,8 +101,9 @@ const reviewShowcase = [
     business: 'Mountain Peak Adventures',
     reviewer: 'Rachel & Tom',
     rating: 5,
-    review: "Our guide Jake made our first hiking experience absolutely incredible. Felt safe the entire time. Photos were stunning!",
-    response: "Rachel & Tom, Jake is going to be thrilled to hear this! He's passionate about introducing newcomers to the trails safely. Those photos from Sunset Ridge are frame-worthy! Now that you've caught the hiking bug, ask about our intermediate trails for your next adventure. Happy trails! – Mountain Peak Team",
+    review: 'Our guide Jake made our first hiking experience absolutely incredible. Felt safe the entire time. Photos were stunning!',
+    response:
+      "Rachel & Tom, Jake is going to be thrilled to hear this! He's passionate about introducing newcomers to the trails safely. Those photos from Sunset Ridge are frame-worthy! Now that you've caught the hiking bug, ask about our intermediate trails for your next adventure. Happy trails! – Mountain Peak Team",
     avatar: 'RT',
   },
   {
@@ -102,8 +112,9 @@ const reviewShowcase = [
     business: 'Casa Maria Mexican Grill',
     reviewer: 'Andrew W.',
     rating: 3,
-    review: "Food was good but portions seem smaller than before. Prices went up too. Still decent for the area.",
-    response: "Andrew, we appreciate your honest feedback. You're right – rising ingredient costs have been challenging, and we've had to make some adjustments. What we won't compromise on is quality and authenticity. We're introducing a new 'Grande' portion option next month for heartier appetites. Hope to see you back! – Maria",
+    review: 'Food was good but portions seem smaller than before. Prices went up too. Still decent for the area.',
+    response:
+      "Andrew, we appreciate your honest feedback. You're right – rising ingredient costs have been challenging, and we've had to make some adjustments. What we won't compromise on is quality and authenticity. We're introducing a new 'Grande' portion option next month for heartier appetites. Hope to see you back! – Maria",
     avatar: 'AW',
   },
   {
@@ -113,7 +124,8 @@ const reviewShowcase = [
     reviewer: 'Nicole F.',
     rating: 5,
     review: "Best gym I've ever joined! Clean equipment, helpful trainers, and 24/7 access is a game changer for my schedule.",
-    response: "Nicole, welcome to the Elite family! We're big believers that fitness should fit YOUR life, not the other way around. That 24/7 access is perfect for early birds and night owls alike. Have you tried our new HIIT classes on Tuesday nights? You'd crush it! – Elite Fitness Team",
+    response:
+      "Nicole, welcome to the Elite family! We're big believers that fitness should fit YOUR life, not the other way around. That 24/7 access is perfect for early birds and night owls alike. Have you tried our new HIIT classes on Tuesday nights? You'd crush it! – Elite Fitness Team",
     avatar: 'NF',
   },
   {
@@ -122,8 +134,9 @@ const reviewShowcase = [
     business: 'Cozy Corner Bookshop',
     reviewer: 'Margaret P.',
     rating: 5,
-    review: "A gem! Staff recommendations are always spot-on. The reading nook with tea is just lovely.",
-    response: "Margaret, you've discovered our favorite spot! There's nothing better than a good book and a warm cup of tea. Your kind words mean the world to our small team. We've just received some new releases we think you'll love – pop by this weekend! – With gratitude, The Cozy Corner Family",
+    review: 'A gem! Staff recommendations are always spot-on. The reading nook with tea is just lovely.',
+    response:
+      "Margaret, you've discovered our favorite spot! There's nothing better than a good book and a warm cup of tea. Your kind words mean the world to our small team. We've just received some new releases we think you'll love – pop by this weekend! – With gratitude, The Cozy Corner Family",
     avatar: 'MP',
   },
   {
@@ -132,8 +145,9 @@ const reviewShowcase = [
     business: 'Apex Moving Company',
     reviewer: 'Steven & Julie',
     rating: 5,
-    review: "Moved our entire 4-bedroom house in 6 hours. Nothing broken, nothing lost. Team was professional and careful.",
-    response: "Steven & Julie, moving day can be so stressful, and we're honored you trusted Apex with your home and memories. Our crew takes pride in treating every item like it's their own grandmother's china! Wishing you countless happy moments in your new home. – The Apex Team",
+    review: 'Moved our entire 4-bedroom house in 6 hours. Nothing broken, nothing lost. Team was professional and careful.',
+    response:
+      "Steven & Julie, moving day can be so stressful, and we're honored you trusted Apex with your home and memories. Our crew takes pride in treating every item like it's their own grandmother's china! Wishing you countless happy moments in your new home. – The Apex Team",
     avatar: 'SJ',
   },
   {
@@ -142,8 +156,9 @@ const reviewShowcase = [
     business: 'Glamour Nails & Spa',
     reviewer: 'Ashley B.',
     rating: 4,
-    review: "Love the gel manicures here! Only wish they had more evening appointment slots available.",
-    response: "Ashley, thank you! Our nail techs put their heart into every manicure. Great news – we've heard requests like yours and starting next month, we're extending hours until 8 PM on Thursdays and Fridays! Perfect for post-work pampering. Book early, those slots will go fast! – Glamour Team",
+    review: 'Love the gel manicures here! Only wish they had more evening appointment slots available.',
+    response:
+      "Ashley, thank you! Our nail techs put their heart into every manicure. Great news – we've heard requests like yours and starting next month, we're extending hours until 8 PM on Thursdays and Fridays! Perfect for post-work pampering. Book early, those slots will go fast! – Glamour Team",
     avatar: 'AB',
   },
   {
@@ -153,7 +168,8 @@ const reviewShowcase = [
     reviewer: 'Frank M.',
     rating: 5,
     review: "The lobster bisque is liquid gold. Been coming here for 20 years and it's never disappointed. A local treasure.",
-    response: "Frank, 20 years! You've been with us since practically the beginning. Customers like you are why we're still here, still making that bisque with the same recipe and the same love. Next time you're in, the first bowl's on us – you've more than earned it. – Chef Roberto & Family",
+    response:
+      "Frank, 20 years! You've been with us since practically the beginning. Customers like you are why we're still here, still making that bisque with the same recipe and the same love. Next time you're in, the first bowl's on us – you've more than earned it. – Chef Roberto & Family",
     avatar: 'FM',
   },
   {
@@ -163,7 +179,8 @@ const reviewShowcase = [
     reviewer: 'Parent of Tyler, age 14',
     rating: 5,
     review: "Dr. Williams is so patient with teenagers! Tyler actually looks forward to his appointments. Braces journey has been smooth.",
-    response: "What a wonderful update on Tyler's journey! Teenagers can be tough customers (we get it!), and we're so glad he's having a positive experience. A great attitude makes treatment go smoother – Tyler's clearly got that down. Can't wait to see that final reveal smile! – Dr. Williams & The Bright Smile Team",
+    response:
+      "What a wonderful update on Tyler's journey! Teenagers can be tough customers (we get it!), and we're so glad he's having a positive experience. A great attitude makes treatment go smoother – Tyler's clearly got that down. Can't wait to see that final reveal smile! – Dr. Williams & The Bright Smile Team",
     avatar: 'PT',
   },
   {
@@ -172,8 +189,9 @@ const reviewShowcase = [
     business: 'Rustic Barn Wedding Venue',
     reviewer: 'Newlyweds Katie & Jim',
     rating: 5,
-    review: "Our wedding day was absolutely PERFECT. The team handled everything flawlessly. Photos look like a fairytale!",
-    response: "Katie & Jim, congratulations on your beautiful wedding! Watching you two say 'I do' under those string lights was pure magic. Every detail, from the flowers to the sunset timing, came together perfectly because of your vision and trust in us. Wishing you a lifetime of happiness! 💕 – The Rustic Barn Family",
+    review: 'Our wedding day was absolutely PERFECT. The team handled everything flawlessly. Photos look like a fairytale!',
+    response:
+      "Katie & Jim, congratulations on your beautiful wedding! Watching you two say 'I do' under those string lights was pure magic. Every detail, from the flowers to the sunset timing, came together perfectly because of your vision and trust in us. Wishing you a lifetime of happiness! 💕 – The Rustic Barn Family",
     avatar: 'KJ',
   },
   {
@@ -182,8 +200,9 @@ const reviewShowcase = [
     business: 'Thompson Plumbing Services',
     reviewer: 'Robert G.',
     rating: 5,
-    review: "Emergency call at 11 PM for a burst pipe. Mike arrived in 30 minutes and fixed it fast. True professional.",
-    response: "Robert, that's what we're here for! A burst pipe at 11 PM is nobody's idea of a good evening. Mike takes pride in fast response times – he knows water damage waits for no one. Glad we could get you dried out and back to normal quickly. We're always just a call away! – Thompson Plumbing Team",
+    review: 'Emergency call at 11 PM for a burst pipe. Mike arrived in 30 minutes and fixed it fast. True professional.',
+    response:
+      "Robert, that's what we're here for! A burst pipe at 11 PM is nobody's idea of a good evening. Mike takes pride in fast response times – he knows water damage waits for no one. Glad we could get you dried out and back to normal quickly. We're always just a call away! – Thompson Plumbing Team",
     avatar: 'RG',
   },
   {
@@ -193,7 +212,8 @@ const reviewShowcase = [
     reviewer: 'Amanda & Carlos',
     rating: 5,
     review: "Our daughter Emma has thrived here! She's learned so much and made wonderful friends. Teachers genuinely care.",
-    response: "Amanda & Carlos, watching Emma blossom has been such a joy for our whole team! She came out of her shell beautifully, and her curiosity is contagious in the classroom. Those finger-paint masterpieces on our wall? Pure Emma magic. Thank you for entrusting us with your little learner! – Miss Sarah & The Little Learners Family",
+    response:
+      "Amanda & Carlos, watching Emma blossom has been such a joy for our whole team! She came out of her shell beautifully, and her curiosity is contagious in the classroom. Those finger-paint masterpieces on our wall? Pure Emma magic. Thank you for entrusting us with your little learner! – Miss Sarah & The Little Learners Family",
     avatar: 'AC',
   },
   {
@@ -202,8 +222,9 @@ const reviewShowcase = [
     business: 'Serenity Day Spa',
     reviewer: 'Michelle D.',
     rating: 5,
-    review: "The hot stone massage was heavenly. Left feeling like a new person. Already booked my next appointment!",
-    response: "Michelle, we're so glad you floated out of here feeling renewed! Our massage therapists are true artists, and the hot stones work their magic on every tired muscle. Smart move booking ahead – self-care should always be on the calendar! See you soon for more serenity. – With warmth, Serenity Spa",
+    review: 'The hot stone massage was heavenly. Left feeling like a new person. Already booked my next appointment!',
+    response:
+      "Michelle, we're so glad you floated out of here feeling renewed! Our massage therapists are true artists, and the hot stones work their magic on every tired muscle. Smart move booking ahead – self-care should always be on the calendar! See you soon for more serenity. – With warmth, Serenity Spa",
     avatar: 'MD',
   },
 ];
@@ -628,7 +649,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Everything You Need to Manage Reviews</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Powerful features designed specifically for local businesses</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Powerful features designed specifically for local businesses
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -638,28 +661,32 @@ export default function HomePage() {
                 iconAlt: 'AI-Powered Responses icon',
                 bgColor: 'bg-primary-50',
                 title: 'AI-Powered Responses',
-                description: 'Generate personalized, human-sounding responses in seconds. Our AI learns your brand voice and tone.',
+                description:
+                  'Generate personalized, human-sounding responses in seconds. Our AI learns your brand voice and tone.',
               },
               {
                 iconSrc: '/platform-support.png',
                 iconAlt: 'Multi-Platform Support icon',
                 bgColor: 'bg-green-50',
                 title: 'Multi-Platform Support',
-                description: 'Manage reviews from Google, Yelp, Facebook, and TripAdvisor all in one unified dashboard.',
+                description:
+                  'Manage reviews from Google, Yelp, Facebook, and TripAdvisor all in one unified dashboard.',
               },
               {
                 iconSrc: '/brand-voice.png',
                 iconAlt: 'Custom Brand Voice icon',
                 bgColor: 'bg-purple-50',
                 title: 'Custom Brand Voice',
-                description: 'Train the AI to match your unique personality, tone, and communication style perfectly.',
+                description:
+                  'Train the AI to match your unique personality, tone, and communication style perfectly.',
               },
               {
                 iconSrc: '/sentiment-analysis.png',
                 iconAlt: 'Sentiment Analysis icon',
                 bgColor: 'bg-yellow-50',
                 title: 'Sentiment Analysis',
-                description: 'Automatically detect negative reviews and prioritize urgent responses to protect your reputation.',
+                description:
+                  'Automatically detect negative reviews and prioritize urgent responses to protect your reputation.',
               },
               {
                 iconSrc: '/approval-workflow.png',
@@ -673,17 +700,18 @@ export default function HomePage() {
                 iconAlt: 'Analytics & Reports icon',
                 bgColor: 'bg-indigo-50',
                 title: 'Analytics & Reports',
-                description: 'Track response rates, sentiment trends, and review volume with detailed analytics.',
+                description:
+                  'Track response rates, sentiment trends, and review volume with detailed analytics.',
               },
             ].map((feature, index) => (
               <div key={feature.title} className="card card-hover group" style={{ animationDelay: `${index * 100}ms` }}>
                 <div
-                  className={`w-14 h-14 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon`}
+                  className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon`}
                 >
                   <img
                     src={feature.iconSrc}
                     alt={feature.iconAlt}
-                    className="w-7 h-7 object-contain"
+                    className="w-12 h-12 object-contain"
                     loading="lazy"
                   />
                 </div>
@@ -701,7 +729,6 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Annual contract with setup deposit applied to your first year</p>
-            {/* First Month Free Banner */}
             <div className="mt-8 inline-flex items-center px-8 py-4 bg-green-500 rounded-2xl shadow-lg shadow-green-500/30 animate-bounce-subtle">
               <span className="text-white text-xl font-bold">🎉 First Month FREE on All Plans!</span>
             </div>
@@ -713,7 +740,9 @@ export default function HomePage() {
               return (
                 <div
                   key={plan.id}
-                  className={`card card-hover relative ${plan.popular ? 'border-2 border-primary-500 shadow-xl shadow-primary-500/10' : ''}`}
+                  className={`card card-hover relative ${
+                    plan.popular ? 'border-2 border-primary-500 shadow-xl shadow-primary-500/10' : ''
+                  }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {plan.popular && (
@@ -766,7 +795,6 @@ export default function HomePage() {
                     ))}
                   </ul>
 
-                  {/* Multi-Language Add-on */}
                   <div className="mb-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
@@ -801,7 +829,6 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-cta-gradient relative overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-32 h-32 border border-white/30 rounded-full" />
           <div className="absolute bottom-10 right-10 w-48 h-48 border border-white/20 rounded-full" />
@@ -835,18 +862,14 @@ export default function HomePage() {
               <span className="text-xl font-bold text-white">GraniteReply</span>
             </div>
             <div className="flex items-center space-x-6 text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">
-                Privacy
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Terms
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Contact
-              </a>
+              <a href="#" className="hover:text-white transition-colors">Privacy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms</a>
+              <a href="#" className="hover:text-white transition-colors">Contact</a>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">© {new Date().getFullYear()} GraniteReply AI. All rights reserved.</div>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">
+            © {new Date().getFullYear()} GraniteReply AI. All rights reserved.
+          </div>
         </div>
       </footer>
     </div>
