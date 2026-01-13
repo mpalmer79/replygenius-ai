@@ -508,7 +508,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section with Gradient */}
+      {/* Industry Examples 2 */}
       <section className="py-16 bg-gradient-to-r from-primary-600 via-accent-600 to-primary-600 animate-gradient bg-[length:200%_auto] relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">
@@ -517,24 +517,17 @@ export default function HomePage() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '50K+', label: 'Reviews Responded' },
-              { value: '500+', label: 'Happy Businesses' },
-              { value: '2 min', label: 'Avg Response Time' },
-              { value: '4.9/5', label: 'Customer Rating' },
-            ].map((stat, index) => (
-              <div 
-                key={stat.label} 
-                className="text-center animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="text-4xl sm:text-5xl font-bold text-white mb-2 counter-animate hover:scale-110 transition-transform cursor-default">
-                  {stat.value}
-                </div>
-                <div className="text-white/80 font-medium">{stat.label}</div>
-              </div>
-            ))}
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <img 
+              src="/dentist.jpg" 
+              alt="Dentist example" 
+              className="rounded-2xl shadow-2xl max-w-sm w-full object-cover border-4 border-white/20"
+            />
+            <img 
+              src="/restaurant.jpg" 
+              alt="Restaurant example" 
+              className="rounded-2xl shadow-2xl max-w-sm w-full object-cover border-4 border-white/20"
+            />
           </div>
         </div>
       </section>
