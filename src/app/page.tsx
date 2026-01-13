@@ -226,27 +226,40 @@ const howItWorksSteps = [
   {
     step: 1,
     title: 'Connect Your Platforms',
-    description: 'Link your Google Business, Yelp, Facebook, and TripAdvisor accounts with just a few clicks. We securely sync all your reviews in real-time.',
+    description:
+      'Link your Google Business, Yelp, Facebook, and TripAdvisor accounts with just a few clicks. We securely sync all your reviews in real-time.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+        />
       </svg>
     ),
   },
   {
     step: 2,
     title: 'Customize Your Brand Voice',
-    description: 'Tell our AI about your business personality, tone preferences, and response style. It learns to sound exactly like you.',
+    description:
+      'Tell our AI about your business personality, tone preferences, and response style. It learns to sound exactly like you.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+        />
       </svg>
     ),
   },
   {
     step: 3,
     title: 'Review & Respond',
-    description: 'AI generates personalized responses instantly. Review, edit if needed, and post with one click. Average response time: under 2 minutes.',
+    description:
+      'AI generates personalized responses instantly. Review, edit if needed, and post with one click. Average response time: under 2 minutes.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -320,9 +333,9 @@ export default function HomePage() {
       <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <a 
-              href="/admin" 
-              target="_blank" 
+            <a
+              href="/admin"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
@@ -332,10 +345,18 @@ export default function HomePage() {
               <span className="text-xl font-bold text-gray-900">GraniteReply</span>
             </a>
             <div className="hidden md:flex items-center justify-center flex-1 space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">Features</a>
-              <a href="#pricing" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">Pricing</a>
-              <a href="#how-it-works" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">How It Works</a>
-              <Link href="/assessment" className="text-gray-500 hover:text-primary-600 transition-colors font-medium">Assessment</Link>
+              <a href="#features" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">
+                Features
+              </a>
+              <a href="#pricing" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">
+                Pricing
+              </a>
+              <a href="#how-it-works" className="text-gray-600 hover:text-primary-600 transition-colors font-medium">
+                How It Works
+              </a>
+              <Link href="/assessment" className="text-gray-500 hover:text-primary-600 transition-colors font-medium">
+                Assessment
+              </Link>
             </div>
             <div className="flex items-center space-x-4">
               <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
@@ -352,13 +373,17 @@ export default function HomePage() {
       {/* Hero Section with Mesh Gradient */}
       <section className="relative pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-mesh-gradient">
         <div className="max-w-7xl mx-auto">
-          <div className={`text-center max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div
+            className={`text-center max-w-4xl mx-auto transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur rounded-full text-primary-700 text-sm font-medium mb-6 shadow-lg border border-primary-100 animate-bounce-subtle">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
               Trusted by 500+ local businesses
             </div>
-            
+
             {/* Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Respond to Every Review with{' '}
@@ -366,18 +391,23 @@ export default function HomePage() {
                 AI Precision
               </span>
             </h1>
-            
+
             {/* Subheadline */}
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Stop spending hours crafting review responses. GraniteReply AI generates personalized, 
-              on-brand replies to your Google, Yelp, Facebook, and TripAdvisor reviews in seconds.
+              Stop spending hours crafting review responses. GraniteReply AI generates personalized, on-brand replies to
+              your Google, Yelp, Facebook, and TripAdvisor reviews in seconds.
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <Link href="/signup" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto group">
                 Start 14-Day Free Trial
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
@@ -390,16 +420,8 @@ export default function HomePage() {
 
           {/* Industry Examples */}
           <div className="mt-12 flex flex-wrap items-center justify-center gap-8">
-            <img 
-              src="/florist.png" 
-              alt="Florist example" 
-              className="rounded-2xl shadow-lg max-w-sm w-full object-cover"
-            />
-            <img 
-              src="/handyman.png" 
-              alt="Handyman example" 
-              className="rounded-2xl shadow-lg max-w-sm w-full object-cover"
-            />
+            <img src="/florist.png" alt="Florist example" className="rounded-2xl shadow-lg max-w-sm w-full object-cover" />
+            <img src="/handyman.png" alt="Handyman example" className="rounded-2xl shadow-lg max-w-sm w-full object-cover" />
           </div>
         </div>
       </section>
@@ -408,9 +430,7 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-primary-50/30 to-white relative">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-              See AI Responses in Action
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">See AI Responses in Action</h2>
             <p className="text-gray-600 text-lg">Real examples of how GraniteReply transforms customer interactions</p>
           </div>
 
@@ -418,14 +438,26 @@ export default function HomePage() {
           <div className="relative">
             {/* Glow effect behind card */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 via-accent-400/20 to-primary-400/20 blur-3xl scale-95" />
-            
-            <div className={`relative bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-500 ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
+
+            <div
+              className={`relative bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-500 ${
+                isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+              }`}
+            >
               {/* Header */}
               <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className={`w-10 h-10 ${platformColors[currentReview.platform].bg} rounded-xl flex items-center justify-center text-white font-bold shadow-lg`}>
-                      {currentReview.platform === 'google' ? 'G' : currentReview.platform === 'yelp' ? 'Y' : currentReview.platform === 'facebook' ? 'f' : 'T'}
+                    <div
+                      className={`w-10 h-10 ${platformColors[currentReview.platform].bg} rounded-xl flex items-center justify-center text-white font-bold shadow-lg`}
+                    >
+                      {currentReview.platform === 'google'
+                        ? 'G'
+                        : currentReview.platform === 'yelp'
+                          ? 'Y'
+                          : currentReview.platform === 'facebook'
+                            ? 'f'
+                            : 'T'}
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">{currentReview.business}</div>
@@ -462,7 +494,9 @@ export default function HomePage() {
                 {/* AI Response */}
                 <div className="p-6 bg-gradient-to-br from-primary-50/50 to-accent-50/50">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-semibold text-primary-600 uppercase tracking-wide">AI-Generated Response</span>
+                    <span className="text-xs font-semibold text-primary-600 uppercase tracking-wide">
+                      AI-Generated Response
+                    </span>
                     <div className="flex items-center space-x-1 text-primary-600">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -494,9 +528,7 @@ export default function HomePage() {
                         }, 300);
                       }}
                       className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        index === currentReviewIndex % 10
-                          ? 'bg-primary-500 w-6'
-                          : 'bg-gray-300 hover:bg-gray-400'
+                        index === currentReviewIndex % 10 ? 'bg-primary-500 w-6' : 'bg-gray-300 hover:bg-gray-400'
                       }`}
                     />
                   ))}
@@ -515,17 +547,17 @@ export default function HomePage() {
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white rounded-full blur-3xl" />
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex flex-wrap items-center justify-center gap-8">
-            <img 
-              src="/dentist.jpg" 
-              alt="Dentist example" 
+            <img
+              src="/dentist.jpg"
+              alt="Dentist example"
               className="rounded-2xl shadow-2xl max-w-sm w-full object-cover border-4 border-white/20"
             />
-            <img 
-              src="/restaurant.jpg" 
-              alt="Restaurant example" 
+            <img
+              src="/restaurant.jpg"
+              alt="Restaurant example"
               className="rounded-2xl shadow-2xl max-w-sm w-full object-cover border-4 border-white/20"
             />
           </div>
@@ -536,19 +568,15 @@ export default function HomePage() {
       <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 bg-section-gradient-1">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              How It Works
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Get started in three simple steps
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Get started in three simple steps</p>
           </div>
 
           {/* Steps */}
           <div className="grid md:grid-cols-3 gap-8 relative">
             {/* Connection line */}
             <div className="hidden md:block absolute top-16 left-1/4 right-1/4 h-1 bg-gradient-to-r from-primary-200 via-accent-300 to-primary-200 rounded-full" />
-            
+
             {howItWorksSteps.map((item, index) => (
               <div
                 key={item.step}
@@ -557,21 +585,25 @@ export default function HomePage() {
                 }`}
               >
                 {/* Step number */}
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-white font-bold text-xl transition-all duration-500 ${
-                  activeStep === index 
-                    ? 'bg-gradient-to-br from-primary-500 to-accent-500 shadow-xl shadow-primary-500/30 animate-pulse-glow' 
-                    : 'bg-gray-300'
-                }`}>
+                <div
+                  className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-white font-bold text-xl transition-all duration-500 ${
+                    activeStep === index
+                      ? 'bg-gradient-to-br from-primary-500 to-accent-500 shadow-xl shadow-primary-500/30 animate-pulse-glow'
+                      : 'bg-gray-300'
+                  }`}
+                >
                   {item.icon}
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed max-w-sm mx-auto">{item.description}</p>
-                
+
                 {/* Active indicator */}
-                <div className={`mt-4 h-1 w-16 mx-auto rounded-full transition-all duration-500 ${
-                  activeStep === index ? 'bg-primary-500 w-24' : 'bg-gray-200'
-                }`} />
+                <div
+                  className={`mt-4 h-1 w-16 mx-auto rounded-full transition-all duration-500 ${
+                    activeStep === index ? 'bg-primary-500 w-24' : 'bg-gray-200'
+                  }`}
+                />
               </div>
             ))}
           </div>
@@ -595,74 +627,65 @@ export default function HomePage() {
       <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Everything You Need to Manage Reviews
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Powerful features designed specifically for local businesses
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Everything You Need to Manage Reviews</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Powerful features designed specifically for local businesses</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />,
-                color: 'from-primary-400 to-primary-600',
+                iconSrc: '/ai-response.png',
+                iconAlt: 'AI-Powered Responses icon',
                 bgColor: 'bg-primary-50',
                 title: 'AI-Powered Responses',
                 description: 'Generate personalized, human-sounding responses in seconds. Our AI learns your brand voice and tone.',
               },
               {
-                icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
-                color: 'from-green-400 to-green-600',
+                iconSrc: '/platform-support.png',
+                iconAlt: 'Multi-Platform Support icon',
                 bgColor: 'bg-green-50',
                 title: 'Multi-Platform Support',
                 description: 'Manage reviews from Google, Yelp, Facebook, and TripAdvisor all in one unified dashboard.',
               },
               {
-                icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />,
-                color: 'from-purple-400 to-purple-600',
+                iconSrc: '/brand-voice.png',
+                iconAlt: 'Custom Brand Voice icon',
                 bgColor: 'bg-purple-50',
                 title: 'Custom Brand Voice',
                 description: 'Train the AI to match your unique personality, tone, and communication style perfectly.',
               },
               {
-                icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />,
-                color: 'from-yellow-400 to-orange-500',
+                iconSrc: '/sentiment-analysis.png',
+                iconAlt: 'Sentiment Analysis icon',
                 bgColor: 'bg-yellow-50',
                 title: 'Sentiment Analysis',
                 description: 'Automatically detect negative reviews and prioritize urgent responses to protect your reputation.',
               },
               {
-                icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />,
-                color: 'from-red-400 to-red-600',
+                iconSrc: '/approval-workflow.png',
+                iconAlt: 'Approval Workflow icon',
                 bgColor: 'bg-red-50',
                 title: 'Approval Workflow',
                 description: 'Review and edit AI responses before posting. Full control with one-click approval.',
               },
               {
-                icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />,
-                color: 'from-indigo-400 to-indigo-600',
+                iconSrc: '/reports.png',
+                iconAlt: 'Analytics & Reports icon',
                 bgColor: 'bg-indigo-50',
                 title: 'Analytics & Reports',
                 description: 'Track response rates, sentiment trends, and review volume with detailed analytics.',
               },
             ].map((feature, index) => (
-              <div
-                key={feature.title}
-                className="card card-hover group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className={`w-14 h-14 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon`}>
-                  <svg className={`w-7 h-7 bg-gradient-to-br ${feature.color} bg-clip-text`} fill="none" stroke="url(#gradient)" viewBox="0 0 24 24">
-                    <defs>
-                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#0ea5e9" />
-                        <stop offset="100%" stopColor="#d946ef" />
-                      </linearGradient>
-                    </defs>
-                    {feature.icon}
-                  </svg>
+              <div key={feature.title} className="card card-hover group" style={{ animationDelay: `${index * 100}ms` }}>
+                <div
+                  className={`w-14 h-14 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon`}
+                >
+                  <img
+                    src={feature.iconSrc}
+                    alt={feature.iconAlt}
+                    className="w-7 h-7 object-contain"
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
@@ -676,12 +699,8 @@ export default function HomePage() {
       <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-section-gradient-2">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Annual contract with setup deposit applied to your first year
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Annual contract with setup deposit applied to your first year</p>
             {/* First Month Free Banner */}
             <div className="mt-8 inline-flex items-center px-8 py-4 bg-green-500 rounded-2xl shadow-lg shadow-green-500/30 animate-bounce-subtle">
               <span className="text-white text-xl font-bold">🎉 First Month FREE on All Plans!</span>
@@ -692,83 +711,91 @@ export default function HomePage() {
             {PRICING_PLANS.map((plan, index) => {
               const multiLangPrice = plan.id === 'starter' ? 49 : plan.id === 'growth' ? 99 : 299;
               return (
-              <div
-                key={plan.id}
-                className={`card card-hover relative ${
-                  plan.popular 
-                    ? 'border-2 border-primary-500 shadow-xl shadow-primary-500/10' 
-                    : ''
-                }`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-gradient-to-r from-primary-500 to-accent-500 text-white text-sm font-medium rounded-full shadow-lg">
-                    Most Popular
-                  </div>
-                )}
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-5xl font-bold text-gray-900">${plan.monthlyPrice}</span>
-                    <span className="text-gray-600">/month</span>
-                  </div>
-                  <div className="text-sm text-gray-500 mb-6 px-3 py-1.5 bg-gray-100 rounded-full inline-block">
-                    ${plan.setupDeposit.toLocaleString()} setup fee
-                  </div>
-                </div>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-600">{plan.locations === 1 ? '1 location' : `Up to ${plan.locations} locations`}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-600">{plan.reviewsPerMonth} reviews/month</span>
-                  </li>
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                {/* Multi-Language Add-on */}
-                <div className="mb-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <span className="text-lg mr-2">🌍</span>
-                      <div>
-                        <p className="text-sm font-semibold text-gray-800">Multi-Language</p>
-                        <p className="text-xs text-gray-500">Spanish & French responses</p>
-                      </div>
-                    </div>
-                    <span className="text-green-700 font-bold">+${multiLangPrice}/mo</span>
-                  </div>
-                </div>
-                <Link
-                  href={`/signup?plan=${plan.id}`}
-                  className={`block text-center py-3.5 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}
+                <div
+                  key={plan.id}
+                  className={`card card-hover relative ${plan.popular ? 'border-2 border-primary-500 shadow-xl shadow-primary-500/10' : ''}`}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  Start Free Trial
-                </Link>
-              </div>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-gradient-to-r from-primary-500 to-accent-500 text-white text-sm font-medium rounded-full shadow-lg">
+                      Most Popular
+                    </div>
+                  )}
+                  <div className="text-center">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{plan.name}</h3>
+                    <div className="mb-4">
+                      <span className="text-5xl font-bold text-gray-900">${plan.monthlyPrice}</span>
+                      <span className="text-gray-600">/month</span>
+                    </div>
+                    <div className="text-sm text-gray-500 mb-6 px-3 py-1.5 bg-gray-100 rounded-full inline-block">
+                      ${plan.setupDeposit.toLocaleString()} setup fee
+                    </div>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="text-gray-600">{plan.locations === 1 ? '1 location' : `Up to ${plan.locations} locations`}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="text-gray-600">{plan.reviewsPerMonth} reviews/month</span>
+                    </li>
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Multi-Language Add-on */}
+                  <div className="mb-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <span className="text-lg mr-2">🌍</span>
+                        <div>
+                          <p className="text-sm font-semibold text-gray-800">Multi-Language</p>
+                          <p className="text-xs text-gray-500">Spanish & French responses</p>
+                        </div>
+                      </div>
+                      <span className="text-green-700 font-bold">+${multiLangPrice}/mo</span>
+                    </div>
+                  </div>
+
+                  <Link
+                    href={`/signup?plan=${plan.id}`}
+                    className={`block text-center py-3.5 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5'
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    }`}
+                  >
+                    Start Free Trial
+                  </Link>
+                </div>
               );
             })}
           </div>
 
-          <p className="text-center text-gray-500 mt-8">
-            All plans include a 14-day free trial. Setup fee is applied to your first year of service.
-          </p>
+          <p className="text-center text-gray-500 mt-8">All plans include a 14-day free trial. Setup fee is applied to your first year of service.</p>
         </div>
       </section>
 
@@ -780,15 +807,14 @@ export default function HomePage() {
           <div className="absolute bottom-10 right-10 w-48 h-48 border border-white/20 rounded-full" />
           <div className="absolute top-1/2 left-1/4 w-24 h-24 border border-white/20 rounded-full" />
         </div>
-        
+
         <div className="max-w-4xl mx-auto text-center relative">
-          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Review Management?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join 500+ businesses saving hours every week with AI-powered responses
-          </p>
-          <Link href="/signup" className="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 group">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">Ready to Transform Your Review Management?</h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Join 500+ businesses saving hours every week with AI-powered responses</p>
+          <Link
+            href="/signup"
+            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 group"
+          >
             Start Your Free Trial
             <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -809,14 +835,18 @@ export default function HomePage() {
               <span className="text-xl font-bold text-white">GraniteReply</span>
             </div>
             <div className="flex items-center space-x-6 text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms</a>
-              <a href="#" className="hover:text-white transition-colors">Contact</a>
+              <a href="#" className="hover:text-white transition-colors">
+                Privacy
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Terms
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Contact
+              </a>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">
-            © {new Date().getFullYear()} GraniteReply AI. All rights reserved.
-          </div>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">© {new Date().getFullYear()} GraniteReply AI. All rights reserved.</div>
         </div>
       </footer>
     </div>
