@@ -388,20 +388,18 @@ export default function HomePage() {
             <p className="text-sm text-gray-500">No credit card required • Setup in 5 minutes</p>
           </div>
 
-          {/* Platform Logos */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-6">
-            {Object.entries(platformColors).map(([platform, colors], index) => (
-              <div
-                key={platform}
-                className={`flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-md border border-gray-100 platform-glow ${colors.glow} cursor-pointer transition-all duration-300 animate-fade-in`}
-                style={{ animationDelay: `${index * 100 + 400}ms` }}
-              >
-                <div className={`w-8 h-8 ${colors.bg} rounded-full flex items-center justify-center text-white font-bold text-sm`}>
-                  {platform === 'google' ? 'G' : platform === 'yelp' ? 'Y' : platform === 'facebook' ? 'f' : 'T'}
-                </div>
-                <span className="text-gray-700 font-medium">{platformNames[platform]}</span>
-              </div>
-            ))}
+          {/* Industry Examples */}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-8">
+            <img 
+              src="/dentist.jpg" 
+              alt="Dentist example" 
+              className="rounded-2xl shadow-lg max-w-sm w-full object-cover"
+            />
+            <img 
+              src="/restaurant.jpg" 
+              alt="Restaurant example" 
+              className="rounded-2xl shadow-lg max-w-sm w-full object-cover"
+            />
           </div>
         </div>
       </section>
