@@ -672,9 +672,9 @@ export default function HomePage() {
                 description: 'Track response rates, sentiment trends, and review volume with detailed analytics.',
               },
             ].map((feature, index) => (
-              <div key={feature.title} className="card card-hover group" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={feature.title} className="card card-hover group text-center" style={{ animationDelay: `${index * 100}ms` }}>
                 <div
-                  className={`w-24 h-24 ${feature.bgColor} rounded-3xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon overflow-hidden`}
+                  className={`w-48 h-48 ${feature.bgColor} rounded-3xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon overflow-hidden mx-auto`}
                 >
                   <img
                     src={feature.iconSrc}
