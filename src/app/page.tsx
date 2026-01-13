@@ -391,13 +391,13 @@ export default function HomePage() {
           {/* Industry Examples */}
           <div className="mt-12 flex flex-wrap items-center justify-center gap-8">
             <img 
-              src="/dentist.jpg" 
-              alt="Dentist example" 
+              src="/florist.png" 
+              alt="Florist example" 
               className="rounded-2xl shadow-lg max-w-sm w-full object-cover"
             />
             <img 
-              src="/restaurant.jpg" 
-              alt="Restaurant example" 
+              src="/handyman.png" 
+              alt="Handyman example" 
               className="rounded-2xl shadow-lg max-w-sm w-full object-cover"
             />
           </div>
