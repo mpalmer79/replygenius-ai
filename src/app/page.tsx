@@ -263,8 +263,7 @@ const howItWorksSteps = [
   {
     step: 2,
     title: 'Customize Your Brand Voice',
-    description:
-      'Tell our AI about your business personality, tone preferences, and response style. It learns to sound exactly like you.',
+    description: 'Tell our AI about your business personality, tone preferences, and response style. It learns to sound exactly like you.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
@@ -415,20 +414,15 @@ export default function HomePage() {
 
             {/* Subheadline */}
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Stop spending hours crafting review responses. GraniteReply AI generates personalized, on-brand replies to
-              your Google, Yelp, Facebook, and TripAdvisor reviews in seconds.
+              Stop spending hours crafting review responses. GraniteReply AI generates personalized, on-brand replies to your Google, Yelp,
+              Facebook, and TripAdvisor reviews in seconds.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <Link href="/signup" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto group">
                 Start 14-Day Free Trial
-                <svg
-                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
@@ -457,7 +451,6 @@ export default function HomePage() {
 
           {/* Review Showcase Card */}
           <div className="relative">
-            {/* Glow effect behind card */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 via-accent-400/20 to-primary-400/20 blur-3xl scale-95" />
 
             <div
@@ -465,7 +458,6 @@ export default function HomePage() {
                 isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
               }`}
             >
-              {/* Header */}
               <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -515,9 +507,7 @@ export default function HomePage() {
                 {/* AI Response */}
                 <div className="p-6 bg-gradient-to-br from-primary-50/50 to-accent-50/50">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-semibold text-primary-600 uppercase tracking-wide">
-                      AI-Generated Response
-                    </span>
+                    <span className="text-xs font-semibold text-primary-600 uppercase tracking-wide">AI-Generated Response</span>
                     <div className="flex items-center space-x-1 text-primary-600">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -535,7 +525,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Progress indicators */}
               <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
                 <div className="flex items-center justify-center space-x-2">
                   {reviewShowcase.slice(0, 10).map((_, index) => (
@@ -563,7 +552,6 @@ export default function HomePage() {
 
       {/* Industry Examples 2 */}
       <section className="py-16 bg-gradient-to-r from-primary-600 via-accent-600 to-primary-600 animate-gradient bg-[length:200%_auto] relative overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white rounded-full blur-3xl" />
@@ -585,7 +573,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works - Animated Steps */}
+      {/* How It Works */}
       <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 bg-section-gradient-1">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -593,19 +581,14 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Get started in three simple steps</p>
           </div>
 
-          {/* Steps */}
           <div className="grid md:grid-cols-3 gap-8 relative">
-            {/* Connection line */}
             <div className="hidden md:block absolute top-16 left-1/4 right-1/4 h-1 bg-gradient-to-r from-primary-200 via-accent-300 to-primary-200 rounded-full" />
 
             {howItWorksSteps.map((item, index) => (
               <div
                 key={item.step}
-                className={`relative text-center transition-all duration-500 ${
-                  activeStep === index ? 'scale-105' : 'scale-100 opacity-70'
-                }`}
+                className={`relative text-center transition-all duration-500 ${activeStep === index ? 'scale-105' : 'scale-100 opacity-70'}`}
               >
-                {/* Step number */}
                 <div
                   className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-white font-bold text-xl transition-all duration-500 ${
                     activeStep === index
@@ -619,25 +602,17 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed max-w-sm mx-auto">{item.description}</p>
 
-                {/* Active indicator */}
-                <div
-                  className={`mt-4 h-1 w-16 mx-auto rounded-full transition-all duration-500 ${
-                    activeStep === index ? 'bg-primary-500 w-24' : 'bg-gray-200'
-                  }`}
-                />
+                <div className={`mt-4 h-1 w-16 mx-auto rounded-full transition-all duration-500 ${activeStep === index ? 'bg-primary-500 w-24' : 'bg-gray-200'}`} />
               </div>
             ))}
           </div>
 
-          {/* Step indicators */}
           <div className="flex justify-center mt-12 space-x-3">
             {[0, 1, 2].map((step) => (
               <button
                 key={step}
                 onClick={() => setActiveStep(step)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeStep === step ? 'bg-primary-500 w-8' : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${activeStep === step ? 'bg-primary-500 w-8' : 'bg-gray-300 hover:bg-gray-400'}`}
               />
             ))}
           </div>
@@ -649,9 +624,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Everything You Need to Manage Reviews</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Powerful features designed specifically for local businesses
-            </p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Powerful features designed specifically for local businesses</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -661,32 +634,28 @@ export default function HomePage() {
                 iconAlt: 'AI-Powered Responses icon',
                 bgColor: 'bg-primary-50',
                 title: 'AI-Powered Responses',
-                description:
-                  'Generate personalized, human-sounding responses in seconds. Our AI learns your brand voice and tone.',
+                description: 'Generate personalized, human-sounding responses in seconds. Our AI learns your brand voice and tone.',
               },
               {
                 iconSrc: '/platform-support.png',
                 iconAlt: 'Multi-Platform Support icon',
                 bgColor: 'bg-green-50',
                 title: 'Multi-Platform Support',
-                description:
-                  'Manage reviews from Google, Yelp, Facebook, and TripAdvisor all in one unified dashboard.',
+                description: 'Manage reviews from Google, Yelp, Facebook, and TripAdvisor all in one unified dashboard.',
               },
               {
                 iconSrc: '/brand-voice.png',
                 iconAlt: 'Custom Brand Voice icon',
                 bgColor: 'bg-purple-50',
                 title: 'Custom Brand Voice',
-                description:
-                  'Train the AI to match your unique personality, tone, and communication style perfectly.',
+                description: 'Train the AI to match your unique personality, tone, and communication style perfectly.',
               },
               {
                 iconSrc: '/sentiment-analysis.png',
                 iconAlt: 'Sentiment Analysis icon',
                 bgColor: 'bg-yellow-50',
                 title: 'Sentiment Analysis',
-                description:
-                  'Automatically detect negative reviews and prioritize urgent responses to protect your reputation.',
+                description: 'Automatically detect negative reviews and prioritize urgent responses to protect your reputation.',
               },
               {
                 iconSrc: '/approval-workflow.png',
@@ -700,18 +669,17 @@ export default function HomePage() {
                 iconAlt: 'Analytics & Reports icon',
                 bgColor: 'bg-indigo-50',
                 title: 'Analytics & Reports',
-                description:
-                  'Track response rates, sentiment trends, and review volume with detailed analytics.',
+                description: 'Track response rates, sentiment trends, and review volume with detailed analytics.',
               },
             ].map((feature, index) => (
               <div key={feature.title} className="card card-hover group" style={{ animationDelay: `${index * 100}ms` }}>
                 <div
-                  className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon`}
+                  className={`w-24 h-24 ${feature.bgColor} rounded-3xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon overflow-hidden`}
                 >
                   <img
                     src={feature.iconSrc}
                     alt={feature.iconAlt}
-                    className="w-12 h-12 object-contain"
+                    className="w-full h-full object-contain scale-[1.55]"
                     loading="lazy"
                   />
                 </div>
@@ -740,9 +708,7 @@ export default function HomePage() {
               return (
                 <div
                   key={plan.id}
-                  className={`card card-hover relative ${
-                    plan.popular ? 'border-2 border-primary-500 shadow-xl shadow-primary-500/10' : ''
-                  }`}
+                  className={`card card-hover relative ${plan.popular ? 'border-2 border-primary-500 shadow-xl shadow-primary-500/10' : ''}`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {plan.popular && (
