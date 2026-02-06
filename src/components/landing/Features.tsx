@@ -1,44 +1,43 @@
-
 const features = [
   {
-    iconSrc: '/ai-response.png',
-    iconAlt: 'AI-Powered Responses icon',
-    bgColor: 'bg-primary-50',
+    // AI-Powered Responses - Person typing on laptop (Kelly Sikkema)
+    imgSrc: 'https://images.unsplash.com/photo-1663465693535-b56de21e58ca?w=640&h=640&fit=crop&crop=center&q=80',
+    imgAlt: 'Business owner typing AI-powered review response on laptop',
     title: 'AI-Powered Responses',
     description: 'Generate personalized, human-sounding responses in seconds. Our AI learns your brand voice and tone.',
   },
   {
-    iconSrc: '/platform-support.png',
-    iconAlt: 'Multi-Platform Support icon',
-    bgColor: 'bg-green-50',
+    // Multi-Platform Support - Smartphone with social media apps (dlxmedia.hu)
+    imgSrc: 'https://images.unsplash.com/photo-1745756726255-0483b2a78e1b?w=640&h=640&fit=crop&crop=center&q=80',
+    imgAlt: 'Smartphone displaying multiple social media and review platform apps',
     title: 'Multi-Platform Support',
     description: 'Manage reviews from Google, Yelp, Facebook, and TripAdvisor all in one unified dashboard.',
   },
   {
-    iconSrc: '/brand-voice.png',
-    iconAlt: 'Custom Brand Voice icon',
-    bgColor: 'bg-purple-50',
+    // Custom Brand Voice - Creative branding workspace (Annie Spratt)
+    imgSrc: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=640&h=640&fit=crop&crop=center&q=80',
+    imgAlt: 'Creative workspace with brand identity materials and color swatches',
     title: 'Custom Brand Voice',
     description: 'Train the AI to match your unique personality, tone, and communication style perfectly.',
   },
   {
-    iconSrc: '/sentiment-analysis.png',
-    iconAlt: 'Sentiment Analysis icon',
-    bgColor: 'bg-yellow-50',
+    // Sentiment Analysis - Customer feedback / review stars (Towfiqu barbhuiya)
+    imgSrc: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?w=640&h=640&fit=crop&crop=center&q=80',
+    imgAlt: 'Customer leaving star rating feedback on their experience',
     title: 'Sentiment Analysis',
     description: 'Automatically detect negative reviews and prioritize urgent responses to protect your reputation.',
   },
   {
-    iconSrc: '/approval-workflow.png',
-    iconAlt: 'Approval Workflow icon',
-    bgColor: 'bg-red-50',
+    // Approval Workflow - Person reviewing content on screen (Christin Hume)
+    imgSrc: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=640&h=640&fit=crop&crop=center&q=80',
+    imgAlt: 'Team reviewing and approving content on laptop screen together',
     title: 'Approval Workflow',
     description: 'Review and edit AI responses before posting. Full control with one-click approval.',
   },
   {
-    iconSrc: '/reports.png',
-    iconAlt: 'Analytics & Reports icon',
-    bgColor: 'bg-indigo-50',
+    // Analytics & Reports - Dashboard with charts (Luke Chesser)
+    imgSrc: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=640&fit=crop&crop=center&q=80',
+    imgAlt: 'Analytics dashboard displaying performance charts and data graphs',
     title: 'Analytics & Reports',
     description: 'Track response rates, sentiment trends, and review volume with detailed analytics.',
   },
@@ -56,13 +55,11 @@ export default function Features() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={feature.title} className="card card-hover group text-center" style={{ animationDelay: `${index * 100}ms` }}>
-              <div
-                className={`w-48 h-48 ${feature.bgColor} rounded-3xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 feature-icon overflow-hidden mx-auto`}
-              >
+              <div className="w-48 h-48 rounded-3xl overflow-hidden mb-5 group-hover:scale-105 transition-transform duration-300 mx-auto shadow-md">
                 <img
-                  src={feature.iconSrc}
-                  alt={feature.iconAlt}
-                  className="w-full h-full object-contain scale-[1.55]"
+                  src={feature.imgSrc}
+                  alt={feature.imgAlt}
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
