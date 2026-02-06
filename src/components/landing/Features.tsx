@@ -1,41 +1,41 @@
 const features = [
   {
-    // AI-Powered Responses - Person typing on laptop (Kelly Sikkema)
-    imgSrc: 'https://images.unsplash.com/photo-1663465693535-b56de21e58ca?w=640&h=640&fit=crop&crop=center&q=80',
+    // AI-Powered Responses - Team working on laptops (confirmed free)
+    imgSrc: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=640&h=640&fit=crop&crop=center&q=80',
     imgAlt: 'Business owner typing AI-powered review response on laptop',
     title: 'AI-Powered Responses',
     description: 'Generate personalized, human-sounding responses in seconds. Our AI learns your brand voice and tone.',
   },
   {
-    // Multi-Platform Support - Smartphone with social media apps (dlxmedia.hu)
-    imgSrc: 'https://images.unsplash.com/photo-1745756726255-0483b2a78e1b?w=640&h=640&fit=crop&crop=center&q=80',
+    // Multi-Platform Support - Social media apps on phone (confirmed free)
+    imgSrc: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=640&h=640&fit=crop&crop=center&q=80',
     imgAlt: 'Smartphone displaying multiple social media and review platform apps',
     title: 'Multi-Platform Support',
     description: 'Manage reviews from Google, Yelp, Facebook, and TripAdvisor all in one unified dashboard.',
   },
   {
-    // Custom Brand Voice - Creative branding workspace (Annie Spratt)
+    // Custom Brand Voice - Creative branding workspace (confirmed free)
     imgSrc: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=640&h=640&fit=crop&crop=center&q=80',
     imgAlt: 'Creative workspace with brand identity materials and color swatches',
     title: 'Custom Brand Voice',
     description: 'Train the AI to match your unique personality, tone, and communication style perfectly.',
   },
   {
-    // Sentiment Analysis - Customer feedback / review stars (Towfiqu barbhuiya)
+    // Sentiment Analysis - Customer feedback (confirmed free)
     imgSrc: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?w=640&h=640&fit=crop&crop=center&q=80',
     imgAlt: 'Customer leaving star rating feedback on their experience',
     title: 'Sentiment Analysis',
     description: 'Automatically detect negative reviews and prioritize urgent responses to protect your reputation.',
   },
   {
-    // Approval Workflow - Person reviewing content on screen (Christin Hume)
+    // Approval Workflow - Team collaborating on laptop (confirmed free)
     imgSrc: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=640&h=640&fit=crop&crop=center&q=80',
     imgAlt: 'Team reviewing and approving content on laptop screen together',
     title: 'Approval Workflow',
     description: 'Review and edit AI responses before posting. Full control with one-click approval.',
   },
   {
-    // Analytics & Reports - Dashboard with charts (Luke Chesser)
+    // Analytics & Reports - Dashboard with charts (confirmed free)
     imgSrc: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=640&fit=crop&crop=center&q=80',
     imgAlt: 'Analytics dashboard displaying performance charts and data graphs',
     title: 'Analytics & Reports',
