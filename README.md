@@ -19,7 +19,7 @@
  
 ---
 
-## What It Does
+## What It Does 
 
 GraniteReply connects to a business's Google Business Profile via OAuth, syncs their reviews into a unified dashboard, and uses GPT-4 to generate responses that match the business's configured brand voice. Owners review, edit, and post responses with one click. Sentiment analysis auto-prioritizes negative reviews.
 
