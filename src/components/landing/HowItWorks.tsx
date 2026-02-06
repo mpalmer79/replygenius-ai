@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -9,42 +8,26 @@ const howItWorksSteps = [
     title: 'Connect Your Platforms',
     description:
       'Link your Google Business, Yelp, Facebook, and TripAdvisor accounts with just a few clicks. We securely sync all your reviews in real-time.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-        />
-      </svg>
-    ),
+    // Network server connections (Taylor Vick - confirmed free)
+    imgSrc: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop&crop=center&q=80',
+    imgAlt: 'Network cables connected to server representing platform integrations',
   },
   {
     step: 2,
     title: 'Customize Your Brand Voice',
     description: 'Tell our AI about your business personality, tone preferences, and response style. It learns to sound exactly like you.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-        />
-      </svg>
-    ),
+    // Person writing on whiteboard - marketing brainstorm (Melanie Deziel - confirmed free)
+    imgSrc: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop&crop=center&q=80',
+    imgAlt: 'Team brainstorming brand voice strategy on whiteboard',
   },
   {
     step: 3,
     title: 'Review & Respond',
     description:
       'AI generates personalized responses instantly. Review, edit if needed, and post with one click. Average response time: under 2 minutes.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
+    // Person clicking on laptop - Microsoft Edge (confirmed free)
+    imgSrc: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop&crop=center&q=80',
+    imgAlt: 'Person reviewing and approving content on laptop with one click',
   },
 ];
 
@@ -68,7 +51,7 @@ export default function HowItWorks() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 relative">
-          <div className="hidden md:block absolute top-16 left-1/4 right-1/4 h-1 bg-gradient-to-r from-primary-200 via-accent-300 to-primary-200 rounded-full" />
+          <div className="hidden md:block absolute top-20 left-1/4 right-1/4 h-1 bg-gradient-to-r from-primary-200 via-accent-300 to-primary-200 rounded-full" />
 
           {howItWorksSteps.map((item, index) => (
             <div
@@ -76,13 +59,18 @@ export default function HowItWorks() {
               className={`relative text-center transition-all duration-500 ${activeStep === index ? 'scale-105' : 'scale-100 opacity-70'}`}
             >
               <div
-                className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-white font-bold text-xl transition-all duration-500 ${
+                className={`w-28 h-28 mx-auto mb-6 rounded-2xl overflow-hidden transition-all duration-500 ${
                   activeStep === index
-                    ? 'bg-gradient-to-br from-primary-500 to-accent-500 shadow-xl shadow-primary-500/30 animate-pulse-glow'
-                    : 'bg-gray-300'
+                    ? 'shadow-xl shadow-primary-500/30 ring-4 ring-primary-400/50'
+                    : 'shadow-md ring-2 ring-gray-200'
                 }`}
               >
-                {item.icon}
+                <img
+                  src={item.imgSrc}
+                  alt={item.imgAlt}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
