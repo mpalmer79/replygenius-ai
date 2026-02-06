@@ -9,15 +9,15 @@ const howItWorksSteps = [
     description:
       'Link your Google Business, Yelp, Facebook, and TripAdvisor accounts with just a few clicks. We securely sync all your reviews in real-time.',
     // Network server connections (Taylor Vick - confirmed free)
-    imgSrc: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop&crop=center&q=80',
+    imgSrc: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=640&h=360&fit=crop&crop=center&q=80',
     imgAlt: 'Network cables connected to server representing platform integrations',
   },
   {
     step: 2,
     title: 'Customize Your Brand Voice',
     description: 'Tell our AI about your business personality, tone preferences, and response style. It learns to sound exactly like you.',
-    // Person writing on whiteboard - marketing brainstorm (Melanie Deziel - confirmed free)
-    imgSrc: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop&crop=center&q=80',
+    // Team brainstorming at whiteboard (confirmed free)
+    imgSrc: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=640&h=360&fit=crop&crop=center&q=80',
     imgAlt: 'Team brainstorming brand voice strategy on whiteboard',
   },
   {
@@ -25,8 +25,8 @@ const howItWorksSteps = [
     title: 'Review & Respond',
     description:
       'AI generates personalized responses instantly. Review, edit if needed, and post with one click. Average response time: under 2 minutes.',
-    // Person clicking on laptop - Microsoft Edge (confirmed free)
-    imgSrc: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop&crop=center&q=80',
+    // Laptop with analytics dashboard on screen (confirmed free)
+    imgSrc: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640&h=360&fit=crop&crop=center&q=80',
     imgAlt: 'Person reviewing and approving content on laptop with one click',
   },
 ];
@@ -51,7 +51,7 @@ export default function HowItWorks() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 relative">
-          <div className="hidden md:block absolute top-20 left-1/4 right-1/4 h-1 bg-gradient-to-r from-primary-200 via-accent-300 to-primary-200 rounded-full" />
+          <div className="hidden md:block absolute top-24 left-1/4 right-1/4 h-1 bg-gradient-to-r from-primary-200 via-accent-300 to-primary-200 rounded-full" />
 
           {howItWorksSteps.map((item, index) => (
             <div
@@ -59,7 +59,7 @@ export default function HowItWorks() {
               className={`relative text-center transition-all duration-500 ${activeStep === index ? 'scale-105' : 'scale-100 opacity-70'}`}
             >
               <div
-                className={`w-28 h-28 mx-auto mb-6 rounded-2xl overflow-hidden transition-all duration-500 ${
+                className={`w-full aspect-video mx-auto mb-6 rounded-2xl overflow-hidden transition-all duration-500 ${
                   activeStep === index
                     ? 'shadow-xl shadow-primary-500/30 ring-4 ring-primary-400/50'
                     : 'shadow-md ring-2 ring-gray-200'
