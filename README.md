@@ -1,12 +1,14 @@
 # GraniteReply AI
 
 <div align="center">
+  <img src="https://img.shields.io/badge/Version-1.1.0-orange?style=for-the-badge" alt="Version 1.1.0" />
   <img src="https://img.shields.io/badge/Next.js-14.0-black?style=for-the-badge&logo=next.js" alt="Next.js" />
   <img src="https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Supabase-Database-green?style=for-the-badge&logo=supabase" alt="Supabase" />
   <img src="https://img.shields.io/badge/OpenAI-GPT--4-412991?style=for-the-badge&logo=openai" alt="OpenAI" />
   <img src="https://img.shields.io/badge/Google-Business%20API-4285F4?style=for-the-badge&logo=google" alt="Google" />
   <img src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Vitest-Testing-6E9F18?style=for-the-badge&logo=vitest" alt="Vitest" />
 </div>
 
 <br />
@@ -47,6 +49,7 @@
 | **Authentication** | Supabase Auth (Google OAuth + Email) |
 | **AI** | OpenAI GPT-4 |
 | **Google Integration** | Google Business Profile API |
+| **Testing** | Vitest + jsdom |
 | **Deployment** | Vercel |
 | **Payments** | Stripe (planned) |
 
@@ -56,67 +59,99 @@
 
 ```
 replygenius-ai/
+├── vitest.config.ts                     # Test runner configuration
 ├── src/
 │   ├── middleware.ts                     # Auth protection for routes
+│   ├── __tests__/
+│   │   └── setup.ts                     # Global test setup & mocks
 │   ├── app/
 │   │   ├── api/
 │   │   │   ├── ai/
-│   │   │   │   └── generate/
-│   │   │   │       └── route.ts          # AI response generation
+│   │   │   │   ├── generate/
+│   │   │   │   │   └── route.ts         # AI response generation
+│   │   │   │   └── __tests__/
+│   │   │   │       └── generate.test.ts # AI generation API tests
 │   │   │   ├── auth/
 │   │   │   │   └── google/
-│   │   │   │       ├── route.ts          # Google Business OAuth initiation
+│   │   │   │       ├── route.ts         # Google Business OAuth initiation
 │   │   │   │       └── callback/
-│   │   │   │           └── route.ts      # Google Business OAuth callback
+│   │   │   │           └── route.ts     # Google Business OAuth callback
 │   │   │   ├── chat/
-│   │   │   │   └── route.ts              # Chat widget API
+│   │   │   │   └── route.ts             # Chat widget API
+│   │   │   ├── demo/
+│   │   │   │   └── generate/
+│   │   │   │       └── route.ts         # Demo response generation
+│   │   │   ├── leads/
+│   │   │   │   ├── submit/
+│   │   │   │   │   └── route.ts         # Lead submission endpoint
+│   │   │   │   └── __tests__/
+│   │   │   │       └── submit.test.ts   # Lead submission API tests
 │   │   │   └── reviews/
 │   │   │       ├── sync/
-│   │   │       │   └── route.ts          # Sync reviews from Google
+│   │   │       │   └── route.ts         # Sync reviews from Google
 │   │   │       └── respond/
-│   │   │           └── route.ts          # Post responses to Google
+│   │   │           └── route.ts         # Post responses to Google
 │   │   ├── auth/
 │   │   │   └── callback/
-│   │   │       └── route.ts              # Supabase auth callback
+│   │   │       └── route.ts             # Supabase auth callback
 │   │   ├── admin/
-│   │   │   └── page.tsx                  # Admin dashboard
+│   │   │   └── page.tsx                 # Admin dashboard
 │   │   ├── assessment/
-│   │   │   └── page.tsx                  # Sales qualification tool
+│   │   │   └── page.tsx                 # Sales qualification tool
 │   │   ├── dashboard/
-│   │   │   ├── layout.tsx                # Dashboard layout with sidebar
-│   │   │   ├── page.tsx                  # Dashboard home
+│   │   │   ├── layout.tsx               # Dashboard layout with sidebar
+│   │   │   ├── page.tsx                 # Dashboard home
+│   │   │   ├── analytics/
+│   │   │   │   └── page.tsx             # Analytics page
+│   │   │   ├── locations/
+│   │   │   │   └── page.tsx             # Locations management
 │   │   │   ├── reviews/
-│   │   │   │   └── page.tsx              # Reviews management
+│   │   │   │   └── page.tsx             # Reviews management
 │   │   │   └── settings/
-│   │   │       └── page.tsx              # Settings & platform connections
+│   │   │       └── page.tsx             # Settings & platform connections
 │   │   ├── login/
-│   │   │   └── page.tsx                  # Login page (Supabase Auth)
+│   │   │   └── page.tsx                 # Login page (Supabase Auth)
 │   │   ├── signup/
-│   │   │   └── page.tsx                  # Signup page (Supabase Auth)
-│   │   ├── globals.css                   # Global styles & animations
-│   │   ├── layout.tsx                    # Root layout with chat widget
-│   │   └── page.tsx                      # Landing page
+│   │   │   └── page.tsx                 # Signup page (Supabase Auth)
+│   │   ├── forgot-password/
+│   │   │   └── page.tsx                 # Password reset request
+│   │   ├── reset-password/
+│   │   │   └── page.tsx                 # Password reset form
+│   │   ├── not-found.tsx                # 404 page
+│   │   ├── globals.css                  # Global styles & animations
+│   │   ├── layout.tsx                   # Root layout with chat widget
+│   │   └── page.tsx                     # Landing page
 │   ├── components/
-│   │   └── ChatWidget.tsx                # Floating chat assistant
+│   │   └── ChatWidget.tsx               # Floating chat assistant
 │   ├── lib/
 │   │   ├── ai/
-│   │   │   ├── response-generator.ts     # OpenAI review responses
-│   │   │   └── chat-config.ts            # Chat assistant configuration
+│   │   │   ├── response-generator.ts    # OpenAI review responses
+│   │   │   ├── chat-config.ts           # Chat assistant configuration
+│   │   │   └── __tests__/
+│   │   │       ├── response-generator.test.ts  # AI generator tests (50 cases)
+│   │   │       └── chat-config.test.ts         # Chat config tests (28 cases)
 │   │   ├── google/
-│   │   │   └── business-profile.ts       # Google Business Profile API
+│   │   │   ├── business-profile.ts      # Google Business Profile API
+│   │   │   └── __tests__/
+│   │   │       └── business-profile.test.ts    # Google API tests (30 cases)
 │   │   ├── supabase/
-│   │   │   ├── client.ts                 # Supabase browser client
-│   │   │   ├── server.ts                 # Supabase server client + admin
-│   │   │   └── middleware.ts             # Session management utilities
-│   │   └── utils.ts                      # Utility functions
+│   │   │   ├── client.ts               # Supabase browser client
+│   │   │   ├── server.ts               # Supabase server client + admin
+│   │   │   └── middleware.ts            # Session management utilities
+│   │   ├── utils.ts                     # Utility functions
+│   │   └── __tests__/
+│   │       └── utils.test.ts            # Utility tests (35 cases)
 │   └── types/
-│       └── index.ts                      # TypeScript type definitions
+│       ├── index.ts                     # TypeScript type definitions
+│       └── __tests__/
+│           └── pricing-plans.test.ts    # Pricing data contract tests (14 cases)
 ├── supabase/
-│   └── schema.sql                        # Database schema with RLS
-├── tailwind.config.ts                    # Tailwind configuration
-├── next.config.js                        # Next.js configuration
-├── tsconfig.json                         # TypeScript configuration
-└── package.json                          # Dependencies
+│   └── schema.sql                       # Database schema with RLS
+├── public/                              # Static assets and images
+├── tailwind.config.ts                   # Tailwind configuration
+├── next.config.js                       # Next.js configuration
+├── tsconfig.json                        # TypeScript configuration
+└── package.json                         # Dependencies & scripts
 ```
 
 ---
@@ -190,6 +225,62 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### 8. Run Tests
+
+```bash
+npm test
+```
+
+---
+
+## 🧪 Testing
+
+GraniteReply uses **Vitest** with **jsdom** for a comprehensive test suite. All external dependencies (OpenAI, Supabase, Google APIs) are mocked so tests run fast and offline.
+
+### Running Tests
+
+```bash
+# Run all tests once
+npm test
+
+# Watch mode (re-runs on file changes)
+npm run test:watch
+
+# Run with coverage report
+npm run test:coverage
+
+# Open Vitest UI in browser
+npm run test:ui
+```
+
+### Test Coverage
+
+| Test File | Cases | What It Covers |
+|-----------|-------|----------------|
+| `utils.test.ts` | 35 | All 11 utility functions — time formatting, currency, platform maps, stars, slugs, email validation |
+| `response-generator.test.ts` | 50 | Prompt construction (4 tones, 3 lengths, negative/mixed handling, CTA, signatures, language detection), OpenAI params, response parsing |
+| `chat-config.test.ts` | 28 | System prompt accuracy (pricing must match PRICING_PLANS), guardrails, escalation triggers, blocked topics |
+| `business-profile.test.ts` | 30 | Token refresh, account/location/review fetching, reply post/delete, pagination, sync with upsert & error counting |
+| `pricing-plans.test.ts` | 14 | Data contract — tier ordering, exact prices, feature inheritance, popular flag |
+| `submit.test.ts` | 8 | Lead form validation, Resend email integration, graceful degradation when email fails |
+| `generate.test.ts` | 12 | Field validation, brand voice fetch with fallback, response saving, status updates, error paths |
+| **Total** | **167** | |
+
+### Test Architecture
+
+Tests follow the **co-location pattern** — each `__tests__/` folder sits next to the source code it tests:
+
+```
+src/lib/ai/response-generator.ts        ← Source
+src/lib/ai/__tests__/response-generator.test.ts  ← Tests
+```
+
+**Global mocks** are configured in `src/__tests__/setup.ts`:
+- **OpenAI** — `mockOpenAICreate` function that tests can configure per-test
+- **Supabase** — Chainable query builder mimicking Supabase's fluent API
+- **Next.js** — `cookies()`, `useRouter()`, `usePathname()`, `useSearchParams()`
+- **Environment variables** — Pre-set for all test runs
 
 ---
 
@@ -288,6 +379,19 @@ All tables include Row Level Security (RLS) policies for data protection. Users 
   "messages": [
     { "role": "user", "content": "What plans do you offer?" }
   ]
+}
+```
+
+### Lead Submission
+
+**POST `/api/leads/submit`** - Submit a sales lead from signup form
+
+```json
+{
+  "fullName": "Sarah Chen",
+  "email": "sarah@oceansidedental.com",
+  "businessName": "Oceanside Dental",
+  "plan": "growth"
 }
 ```
 
@@ -449,6 +553,7 @@ The dashboard tracks:
 - [x] Route protection middleware
 - [x] Row Level Security policies
 - [x] Multi-location database support
+- [x] Test suite with 167 test cases (Vitest)
 
 ### In Progress
 - [ ] Dashboard with real data (replacing mock data)
